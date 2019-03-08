@@ -1,0 +1,110 @@
+<html>
+
+<form name= "myf" id = "myf" action="logged/" method="post" onsubmit="return Logvalid()">
+    {% csrf_token %}
+
+    {% if error_message %}
+        <p><strong>{{ error_message}}</strong></p>
+    {% endif%}
+    <h1>Log in</h1>
+
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="number" placeholder="Enter Username" name="uname" id = "uname" required>
+<p>
+
+
+</p>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id = "psw" required>
+<p>
+</p>
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+</form>
+<form action="" name="f" id="f" onsubmit="return RegVal()">
+    <!-- <span type="submit" name = "for" id="for" class="reg"><a href="register">Register?</a></span> <br>
+    -->
+    <button type="submit"> Register </button>
+
+</form>
+
+<form action="forgot">
+    <span class="psw" ><a href="forgot">Forgot password?</a></span>
+</form>
+
+<script>
+
+
+
+    function Logvalid(){
+        if(window.location.pathname == "/login/logged/"){
+
+                document.getElementById("myf").action = "../";
+
+                return true;
+         }
+         else if(window.location.pathname == "/login/reg"){
+
+                document.getElementById("myf").action = "./logged";
+
+                return true;
+         }
+         else if(window.location.pathname == "/login/"){
+
+            document.getElementById("myf").action = "logged";
+
+            return true;
+         }
+         else{
+
+            document.getElementById("myf").action = "./";
+
+            return true;
+
+         }
+    }
+
+
+
+
+
+
+
+
+
+    function RegVal(){
+            alert(window.location.pathname + " delete ");
+
+            if(window.location.pathname == "/login/reg"){
+
+                document.getElementById("f").action = "./register";
+                return true;
+
+
+            }else if(window.location.pathname == "/login/"){
+
+                document.getElementById("f").action = "register";
+                return true;
+
+            }else if(window.location.pathname == "/login/logged"){
+
+                document.getElementById("f").action = "./register";
+                return true;
+            }
+            else{
+
+
+                return true;
+            }
+    }
+
+
+</script>
+
+<html>
+

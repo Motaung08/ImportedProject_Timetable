@@ -5,7 +5,8 @@ test:
   - apt-get update -qy
   - apt-get install -y python-dev python-pip
   - pip install -r requirements.txt
-  - python manage.py test/loggedin
+  - python manage.py test
+  - python views.py test
   - pip install flake8 pytest pytest-cov
   #- python tests/test_all_of_the_units.py
 

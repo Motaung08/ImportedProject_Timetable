@@ -6,6 +6,7 @@ test:
   - apt-get install -y python-dev python-pip
   - pip install -r requirements.txt
   - python manage.py test
+  - python tests/test_all_of_the_units.py
 
 staging:
   type: deploy

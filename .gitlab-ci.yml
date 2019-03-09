@@ -5,8 +5,9 @@ test:
   - apt-get update -qy
   - apt-get install -y python-dev python-pip
   - pip install -r requirements.txt
-  - python manage.py test
-  - python tests/test_all_of_the_units.py
+  - python manage.py test/loggedin
+  - pip install flake8 pytest pytest-cov
+  #- python tests/test_all_of_the_units.py
 
 staging:
   type: deploy

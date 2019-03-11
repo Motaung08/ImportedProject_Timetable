@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-
+STATICFILES_DIRS=[os.path.join(BASE_DIR,"static"),'Timetable Generator/timetable-generator/Timetable/Register/templates/Register/static/css/']
 # Application definition
 
 INSTALLED_APPS = [

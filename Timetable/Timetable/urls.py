@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^login/', include('Register.urls')),
 
     url(r'^logged/', include('loggedin.urls')),
+
 ]

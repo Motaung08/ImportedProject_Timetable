@@ -38,13 +38,13 @@ run:
   # run the command here
   artifacts:
     paths:
-    - dist/*.whl
+  #  - dist/*.whl
 
 pages:
   script:
   - pip install sphinx sphinx-rtd-theme
  # - cd doc ; make html
-  - mv build/html/ ../public/
+ # - mv build/html/ ../public/
   artifacts:
     paths:
     - public

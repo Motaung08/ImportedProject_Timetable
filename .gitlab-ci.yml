@@ -27,6 +27,7 @@ before_script:
 test:
   script:
   - python manage.py test
+  - requirements.txt
  # - pip install tox flake8  # you can also use tox
  # - tox -e py36,flake8
 

@@ -44,7 +44,7 @@ run:
 pages:
   script:
   - pip install sphinx sphinx-rtd-theme
-  - requirements.txt
+
  # - cd doc ; make html
  # - mv build/html/ ../public/
   artifacts:

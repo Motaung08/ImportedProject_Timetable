@@ -2,6 +2,9 @@
 #[-e] git+http://git.example.com/MyProject#egg=MyProject
 #[-e] git+https://git.example.com/MyProject#egg=MyProject
 #[-e] git+ssh://git.example.com/MyProject#egg=MyProject
-[-e] git+git://git.example.com/MyProject#egg=MyProject
+#[-e] git+git://git.example.com/MyProject#egg=MyProject
 #[-e] git+file:///home/user/projects/MyProject#egg=MyProject
--e git+git@git.example.com:MyProject#egg=MyProject
+#-e git+git@git.example.com:MyProject#egg=MyProject
+
+[-e] git+http://${AUTH_USER}:${AUTH_PASSWORD}@git.example.com/MyProject#egg=MyProject
+#[-e] git+https://${AUTH_USER}:${AUTH_PASSWORD}@git.example.com/MyProject#egg=MyProject

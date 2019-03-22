@@ -23,9 +23,11 @@ before_script:
   - pip install virtualenv
   - virtualenv venv
   - source venv/bin/activate
+  - pip install -r requirements.txt
 
 test:
   script:
+  - pip install -r requirements.txt
   - python manage.py test
   
  # - pip install tox flake8  # you can also use tox
@@ -37,6 +39,7 @@ run:
   # an alternative approach is to install and run:
   - pip install dist/*
   # run the command here
+  -mv build/../dist/*
   artifacts:
     paths:
     - dist/*.whl
@@ -44,9 +47,9 @@ run:
 pages:
   script:
   - pip install sphinx sphinx-rtd-theme
-
+  - echo "" > webpage.html
  # - cd doc ; make html
- # - mv build/html/ ../public/
+  - mv build/html/ ../public/
   artifacts:
     paths:
     - public

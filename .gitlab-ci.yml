@@ -23,27 +23,32 @@ before_script:
   - pip install virtualenv
   - virtualenv venv
   - source venv/bin/activate
+  - pip install -r requirements.txt
 
 test:
   script:
+  - pip install -r requirements.txt
   - python manage.py test
+  
  # - pip install tox flake8  # you can also use tox
-  #- tox -e py36,flake8
+ # - tox -e py36,flake8
 
 run:
   script:
   - python manage.py bdist_wheel
   # an alternative approach is to install and run:
- # - pip install dist/*
+  - pip install dist/*
   # run the command here
+ # -mv build/../dist/*
   artifacts:
     paths:
-  #  - dist/*.whl
+    - dist/*.whl
 
 pages:
   script:
   - pip install sphinx sphinx-rtd-theme
- # - cd doc ; #make html
+  - echo "" > webpage.html
+ # - cd doc ; make html
   - mv build/html/ ../public/
   artifacts:
     paths:

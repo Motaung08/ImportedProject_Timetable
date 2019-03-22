@@ -30,6 +30,13 @@ test:
  # - pip install tox flake8  # you can also use tox
   #- tox -e py36,flake8
 
+deploy_stage:
+    stage: deploy
+    script:
+     - bash ./deploy_stage_gitlab.sh
+     when: on_success
+     only:
+     - dev
 run:
   script:
   - python manage.py bdist_wheel
@@ -39,6 +46,7 @@ run:
   artifacts:
     paths:
   #  - dist/*.whl
+
 
 pages:
   script:

@@ -1,5 +1,5 @@
 #[-e] git://git.example.com/MyProject#egg=MyProject
-[-e] git+http://git.example.com/MyProject#egg=MyProject
+#[-e] git+http://git.example.com/MyProject#egg=MyProject
 [-e] git+https://git.example.com/MyProject#egg=MyProject
 [-e] git+ssh://git.example.com/MyProject#egg=MyProject
 [-e] git+git://git.example.com/MyProject#egg=MyProject

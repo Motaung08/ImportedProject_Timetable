@@ -1,1 +1,1 @@
-sudo -H pip install virtualenv
+pip freeze

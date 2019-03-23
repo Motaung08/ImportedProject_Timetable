@@ -1,1 +1,5 @@
--e svn+http://myrepo/svn/MyApp#egg=MyApp
+#-e svn+http://myrepo/svn/MyApp#egg=MyApp
+
+-e git://git.myproject.org/MyProject.git@master#egg=MyProject
+-e git://git.myproject.org/MyProject.git@v1.0#egg=MyProject
+-e git://git.myproject.org/MyProject.git@da39a3ee5e6b4b0d3255bfef95601890afd80709#egg=MyProject

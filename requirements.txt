@@ -1,1 +1,1 @@
-pip freeze
+-e svn+http://myrepo/svn/MyApp#egg=MyApp

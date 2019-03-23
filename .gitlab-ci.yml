@@ -39,7 +39,7 @@ run:
   # an alternative approach is to install and run:
   - pip install dist/*
   # run the command here
-  -mv build/../dist/*
+  #-mv build/../dist/*
   artifacts:
     paths:
     - dist/*.whl

@@ -17,17 +17,19 @@ cache:
   paths:
     - .cache/pip
     - venv/
+   # - ../dist/*
+    - dist/*
 
 before_script:
   - python -V               # Print out python version for debugging
   - pip install virtualenv
   - virtualenv venv
   - source venv/bin/activate
-  - pip install -r requirements.txt
+  #- pip install -r requirements.txt
 
 test:
   script:
-  - pip install -r requirements.txt
+  -# pip install -r requirements.txt
   - python manage.py test
   
   - pip install tox flake8  # you can also use tox
@@ -37,12 +39,12 @@ run:
   script:
   - python manage.py bdist_wheel
   # an alternative approach is to install and run:
-  #- pip install dist/*
+  - pip install dist/*
   # run the command here
   #-mv build/../dist/*
   artifacts:
     paths:
-   # - dist/*.whl
+    - dist/*.whl
 
 pages:
   script:

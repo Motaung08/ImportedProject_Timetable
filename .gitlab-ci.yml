@@ -42,7 +42,7 @@ run:
   #-mv build/../dist/*
   artifacts:
     paths:
-    - dist/*.whl
+   # - dist/*.whl
 
 pages:
   script:

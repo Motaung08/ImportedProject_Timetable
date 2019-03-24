@@ -41,7 +41,7 @@ run:
   # an alternative approach is to install and run:
   - pip install dist/*
   # run the command here
-  #-mv build/../dist/*
+  -mv build/../dist/*
   artifacts:
     paths:
     - dist/*.whl
@@ -51,7 +51,8 @@ pages:
   - pip install sphinx sphinx-rtd-theme
   - echo "" > webpage.html
  # - cd doc ; make html
-  #- mv build/html/ ../public/
+   -mkdir html
+  - mv build/html/ ../public/
   artifacts:
     paths:
     - public

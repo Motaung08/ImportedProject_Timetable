@@ -38,40 +38,39 @@ image: $CI_IMAGE
   - /(^docs[\/-].*|.*-docs$)/
   
   
-.windows_base:
-  variables: &windows_base_variables
-    PKG_NAMESPACE: gitlab.com\gitlab-org
-    PKG_NAME: gitlab-runner
-    GOPATH: "$CI_PROJECT_DIR\\.gopath"
-    PKG_BASE_DIR: "$CI_PROJECT_DIR\\.gopath\\src\\$PKG_NAMESPACE"
-    PKG_BUILD_DIR: "$CI_PROJECT_DIR\\.gopath\\src\\$PKG_NAMESPACE\\$PKG_NAME"
+#.windows_base:
+ # variables: &windows_base_variables
+  #  PKG_NAMESPACE: gitlab.com\gitlab-org
+   # PKG_NAME: gitlab-runner
+    #GOPATH: "$CI_PROJECT_DIR\\.gopath"
+    #PKG_BASE_DIR: "$CI_PROJECT_DIR\\.gopath\\src\\$PKG_NAMESPACE"
+    #PKG_BUILD_DIR: "$CI_PROJECT_DIR\\.gopath\\src\\$PKG_NAMESPACE\\$PKG_NAME"
 
-.docker: &docker
+#.docker: &docker
   <<: *except_docs
-  services:
-  - docker:dind
-  variables: &docker_variables
-    CI_IMAGE: registry.gitlab.com/gitlab-org/gitlab-runner/ci:1.8.7-2
-    DOCKER_DRIVER: overlay2
-    DOCKER_HOST: tcp://docker:2375
-  tags:
-  - docker
+ # services:
+  #- docker:dind
+  #variables: &docker_variables
+   # CI_IMAGE: registry.gitlab.com/gitlab-org/gitlab-runner/ci:1.8.7-2
+    #DOCKER_DRIVER: overlay2
+    #DOCKER_HOST: tcp://docker:2375
+  #tags:
+ # - docker
 
-.windows1803: &windows1803
-  variables: &windows1803_variables
+#.windows1803: &windows1803
+  #variables: &windows1803_variables
     <<: *windows_base_variables
-    WINDOWS_VERSION: nanoserver1803
-  tags:
-  - windows-1803
-  - shell
+   # WINDOWS_VERSION: nanoserver1803
+  #tags:
+ # - windows-1803
+  #- shell
 
-.windows1809: &windows1809
-  variables: &windows1809_variables
+#.windows1809: &windows1809
+ # variables: &windows1809_variables
     <<: *windows_base_variables
-    WINDOWS_VERSION: nanoserver1809
-  tags:
-  - windows-1809
-  - shell
+   # WINDOWS_VERSION: nanoserver1809
+  # - windows-1809
+#  - shell
 
 
 

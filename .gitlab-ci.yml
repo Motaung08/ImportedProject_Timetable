@@ -67,8 +67,8 @@ pages:
   script:
   - pip install sphinx sphinx-rtd-theme
   - echo "" > webpage.html
-  - cd doc ; make html
-  - mv build/html/ ../public/
+  #- cd doc ; make html
+  #- mv build/html/ ../public/
   artifacts:
     paths:
     - public

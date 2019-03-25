@@ -10,18 +10,6 @@ variables:
   PIP_CACHE_DIR: "~/Desktop/Gitlab$/.cache/pip"
   
  
- 
-
-# Pip's cache doesn't store the python packages
-# https://pip.pypa.io/en/stable/reference/pip_install/#caching
-#
-# If you want to also cache the installed packages, you have to install
-# them in a virtualenv and cache it as well.
-
-#before_script:
- # - unset GPG_KEY
-
-#image: $CI_IMAGE
 
 # Skip all jobs except the ones that begin and end with 'docs'.
 # Used for commits including ONLY documentation changes.
@@ -30,6 +18,12 @@ variables:
   except:
   - /(^docs[\/-].*|.*-docs$)/
   
+  # Pip's cache doesn't store the python packages
+# https://pip.pypa.io/en/stable/reference/pip_install/#caching
+#
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+
 
 cache:
   paths:
@@ -59,10 +53,13 @@ run:
 #  - pip install dist/*
   # run the command here
  # -mv build/../dist/*
+  [[runners]]
+  output_limit = 10000
+ 
   artifacts:
     paths:
     #- dist/*.whl
-
+   
 pages:
   script:
   - pip install sphinx sphinx-rtd-theme

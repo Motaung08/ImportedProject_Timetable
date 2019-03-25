@@ -31,6 +31,10 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR,"static"),'Timetable Generator/timetable
 # Application definition
 
 INSTALLED_APPS = [
+   # 'Class.apps.ClassConfig',
+   #  'Announcements.apps.AnnouncementsConfig',
+   #  'Courses.apps.CoursesConfig',
+    'Lecturer.apps.LecturerConfig',
     'Register.apps.RegisterConfig',
     'django.contrib.admin',
     'django.contrib.auth',

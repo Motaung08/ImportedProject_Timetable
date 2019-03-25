@@ -15,3 +15,43 @@ class StudentsRegister(models.Model):
 class Login(models.Model):
     Student_No = models.ForeignKey(StudentsRegister, on_delete=models.CASCADE)
     Password = models.IntegerField()
+
+
+class Lecturer(models.Model):
+    Lect_No = models.IntegerField(primary_key=True)
+    Name = models.CharField(max_length=100)
+    Email = models.EmailField(max_length=100)
+    Password = models.CharField(max_length=100)
+    CellPhone_No = models.IntegerField()
+
+    def __str__(self):
+        return self.Name + ' - ' + str(self.Lect_No)
+
+class Courses(models.Model):
+    Course_Code = models.CharField(primary_key=True, max_length=100)
+    Course_Name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.Course_Name + ' - ' + str(self.Course_Code)
+
+
+class Announcements(models.Model):
+    Course_Code = models.ForeignKey(Courses, on_delete=models.CASCADE)
+    Lect_No = models.ForeignKey(Lecturer, on_delete=models.CASCADE)
+    Title = models.CharField(max_length=100)
+    Content = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.Lect_No + ' - ' + str(self.Course_Code)
+
+class Class(models.Model):
+    Student_No = models.ForeignKey(StudentsRegister, on_delete=models.CASCADE)
+    Course_Code = models.ForeignKey(Courses, on_delete=models.CASCADE)
+    Lect_No = models.ForeignKey(Lecturer, on_delete=models.CASCADE)
+    Slot = models.CharField(max_length=100)
+
+
+    def __str__(self):
+        return self.Student_No + ' - ' + self.Lect_No + ' - ' + str(self.Course_Code)
+
+

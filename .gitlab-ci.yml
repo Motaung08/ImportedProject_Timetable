@@ -42,7 +42,7 @@ run:
   # run the command here
   artifacts:
     paths:
-    -loggedin 
+     
 
 pages:
   script:

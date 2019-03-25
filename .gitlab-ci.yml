@@ -35,7 +35,7 @@ cache:
   paths:
     - .cache/pip
     - venv/
-    - dist/*
+   # - dist/*
 
 before_script:
   - python -V               # Print out python version for debugging
@@ -61,7 +61,7 @@ run:
  # -mv build/../dist/*
   artifacts:
     paths:
-    - dist/*.whl
+    #- dist/*.whl
 
 pages:
   script:

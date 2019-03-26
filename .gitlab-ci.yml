@@ -29,7 +29,6 @@ test:
   script:
   - python manage.py test
   - coverage run manage.py
-  - coverage run index.html
   - coverage report -m
   - coverage html
   

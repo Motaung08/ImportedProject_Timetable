@@ -29,8 +29,6 @@ test:
   script:
   - python manage.py test
   - coverage run manage.py
-  - coverage run apps.py
-  - coverage run urls.py
   - coverage report -m
   - coverage html
   

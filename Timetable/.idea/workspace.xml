@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a64db777-3e4c-4e45-ad0f-ad2b3910fb9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Lecturer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lecturer/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Register/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Register/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Register/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Register/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Register/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Register/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timetable/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timetable/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lecturer/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lecturer/apps.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,15 +12,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Register/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Register/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
@@ -46,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Register/migrations/__init__.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -65,6 +48,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1122">
               <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Register/templates/Register/forgot.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="829">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
             </state>
           </provider>
         </entry>
@@ -95,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lecturer/apps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -136,9 +128,9 @@
         <option value="$PROJECT_DIR$/Register/models.py" />
         <option value="$PROJECT_DIR$/Register/admin.py" />
         <option value="$PROJECT_DIR$/Timetable/settings.py" />
-        <option value="$PROJECT_DIR$/Lecturer/apps.py" />
         <option value="$PROJECT_DIR$/Register/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/Register/migrations/0002_auto_20190325_1718.py" />
+        <option value="$PROJECT_DIR$/Lecturer/apps.py" />
       </list>
     </option>
   </component>
@@ -175,7 +167,14 @@
               <item name="Timetable" type="b2602c69:ProjectViewProjectNode" />
               <item name="Timetable" type="462c0819:PsiDirectoryNode" />
               <item name="Register" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Timetable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Timetable" type="462c0819:PsiDirectoryNode" />
+              <item name="Register" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Register" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -221,7 +220,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14434524" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -234,7 +233,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32872504" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49925596" visible="true" weight="0.51152074" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49925596" visible="true" weight="0.22119816" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074404" side_tool="true" weight="0.13978495" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32872504" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -302,13 +301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Register/templates/Register/forgot.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="111" lean-forward="true" selection-start-line="111" selection-end-line="111" />
         </state>
       </provider>
     </entry>
@@ -510,18 +502,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lecturer/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Register/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Lecturer/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Register/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Lecturer/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Register/templates/Register/forgot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

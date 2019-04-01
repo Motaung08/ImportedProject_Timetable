@@ -7,34 +7,14 @@ stages:
 build:
     stage: build
     script:
+        - python -V
+        - pip install coverage
         - echo "Building"
         - mkdir build
         - touch build/info.txt
     artifacts:
         paths:
             - build/
-    
-
-variables:
-  #PIP_CACHE_DIR: "$loggedin/.cache/pip"
-
-# Pip's cache doesn't store the python packages
-# https://pip.pypa.io/en/stable/reference/pip_install/#caching
-#
-# If you want to also cache the installed packages, you have to install
-# them in a virtualenv and cache it as well.
-cache:
-  paths:
-    - .cache/pip
-    - venv/
-
-before_script:
-  - python -V               # Print out python version for debugging
-  - pip install virtualenv
-  - pip install coverage
-  - virtualenv venv
-  - source venv/bin/activate
-
 test:
   stage: test
   script:
@@ -45,24 +25,7 @@ test:
   - coverage report -m
   - CODECOV_TOKEN="f6d9991c-c08f-4b13-bb6c-4d6214769ac8"
   
-  #- bash <(curl -s https://codecov.io/bash)>
-  
-  
- # - pip install tox flake8  # you can also use tox
- # - tox -e py36,flake8
-
-run:
-  script:
-  - python manage.py bdist_wheel
-  # an alternative approach is to install and run:
- # - pip install dist/*
-  # run the command here
-  artifacts:
-    paths:
-        - build/
-     
-
-pages:
+  pages:
   script:
   - pip install sphinx sphinx-rtd-theme
   artifacts:
@@ -70,3 +33,44 @@ pages:
     - build/
   only:
   - sfiso
+    
+
+#variables:
+  #PIP_CACHE_DIR: "$loggedin/.cache/pip"
+
+# Pip's cache doesn't store the python packages
+# https://pip.pypa.io/en/stable/reference/pip_install/#caching
+#
+# If you want to also cache the installed packages, you have to install
+# them in a virtualenv and cache it as well.
+#cache:
+ # paths:
+  #  - .cache/pip
+   # - venv/
+
+#before_script:
+ # - python -V               # Print out python version for debugging
+  #- pip install virtualenv
+ # - pip install coverage
+  #- virtualenv venv
+  #- source venv/bin/activate
+
+
+  #- bash <(curl -s https://codecov.io/bash)>
+  
+  
+ # - pip install tox flake8  # you can also use tox
+ # - tox -e py36,flake8
+
+#run:
+  #script:
+ # - python manage.py bdist_wheel
+  # an alternative approach is to install and run:
+ # - pip install dist/*
+  # run the command here
+ # artifacts:
+  #  paths:
+   #     - build/
+     
+
+

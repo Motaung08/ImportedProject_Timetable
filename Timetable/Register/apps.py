@@ -21,4 +21,12 @@ class ClassConfig(AppConfig):
     name = 'Class'
 
 
+class RegisteredStdsConfig(AppConfig):
+    name = 'RegisteredStds'
+
+class RegisteredStaffConfig(AppConfig):
+    name = 'RegisteredStaff'
+
+
+
 

@@ -14,7 +14,7 @@ urlpatterns = [
 
     url(r'^logged', views.login),
 
-   # url(r'^logged', views.loginconfirm),
+    url(r'^courses', views.courses),
 
     url(r'^forgot', views.forgot),
 

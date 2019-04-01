@@ -4,8 +4,9 @@ import sys
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import HttpResponse,render, redirect
-from .models import StudentsRegister,Login
+from .models import StudentsRegister, Login, Lecturer, Courses, Announcements, Class, RegisteredStd, RegisteredStaffs
 
+stdnum = 0;
 
 
 def login(request):
@@ -13,6 +14,7 @@ def login(request):
     try:
         kep = request.POST.get('uname', False)
         stdin = int(request.POST.get('uname', False))
+        stdnum = stdin
         pswin = request.POST.get('psw', False)
         user = StudentsRegister.objects.get(Student_No=stdin, Password=pswin)
     except StudentsRegister.DoesNotExist:
@@ -80,7 +82,6 @@ def Reg(request):
 
 
 
-
     a = StudentsRegister()
     a.Student_No = int(std)
     a.Name= na
@@ -97,6 +98,23 @@ def Reg(request):
     print(" sent Reg"),
 
     return render(request, 'Register/Log_in.html')
+
+def courses(request):
+    print("inside function")
+    #print(stdnum);
+    s = int(request.POST.get('uname', False))
+    print(s)
+
+    user = RegisteredStd.objects.filter(Std_no=1643694)
+
+    print(user.Course_Code)
+    print("below s")
+    context = {
+        'user': user,
+    }
+    print("inside function")
+
+    return render(request, 'Register/Courses.html', context)
 
 
 def reset(request):

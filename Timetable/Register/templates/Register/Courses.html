@@ -1,0 +1,36 @@
+<html>
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Courses </title>
+
+
+</head>
+
+
+<body>
+
+<form action="" name="f" id="f" onsubmit="return RegVal()">
+
+
+<label>
+You are registered to do the following modules
+</label>
+<p>
+
+<textarea id = "t" name="n" rows="8" cols="80">
+    {%if user%}
+        {%for i in user%}
+            <li>{{i.Course_Code}}</li>
+        {%endfor%}
+    {%endif%}
+
+</textarea>
+
+</form>
+
+
+</body>
+
+<html>

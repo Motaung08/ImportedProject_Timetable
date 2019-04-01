@@ -9,7 +9,7 @@ class StudentsRegister(models.Model):
     CellPhone_No = models.IntegerField()
 
     def __str__(self):
-        return self.Name + ' - ' + str(self.Student_No)
+        return str(self.Name) + ' - ' + str(self.Student_No)
 
 
 class Login(models.Model):
@@ -25,14 +25,14 @@ class Lecturer(models.Model):
     CellPhone_No = models.IntegerField()
 
     def __str__(self):
-        return self.Name + ' - ' + str(self.Lect_No)
+        return str(self.Name) + ' - ' + str(self.Lect_No)
 
 class Courses(models.Model):
     Course_Code = models.CharField(primary_key=True, max_length=100)
     Course_Name = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.Course_Name + ' - ' + str(self.Course_Code)
+        return str(self.Course_Name) + ' - ' + str(self.Course_Code)
 
 
 class Announcements(models.Model):
@@ -42,7 +42,7 @@ class Announcements(models.Model):
     Content = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.Lect_No + ' - ' + str(self.Course_Code)
+        return str(self.Lect_No) + ' - ' + str(self.Course_Code)
 
 class Class(models.Model):
     Student_No = models.ForeignKey(StudentsRegister, on_delete=models.CASCADE)
@@ -52,6 +52,22 @@ class Class(models.Model):
 
 
     def __str__(self):
-        return self.Student_No + ' - ' + self.Lect_No + ' - ' + str(self.Course_Code)
+        return str(self.Student_No) + ' - ' + self.Lect_No + ' - ' + str(self.Course_Code)
+
+class RegisteredStd(models.Model):
+    Std_no = models.IntegerField(max_length=100)
+    Course_Code =models.CharField(max_length=100)
+
+
+    def __str__(self):
+        return str(self.Std_no) + ' - ' + str(self.Course_Code)
+
+class RegisteredStaffs(models.Model):
+    Staff_no = models.IntegerField(max_length=100)
+    Course_Code = models.CharField(max_length=100)
+
+    def __str__(self):
+        return str(self.Staff_no) + ' - ' + str(self.Course_Code)
+
 
 

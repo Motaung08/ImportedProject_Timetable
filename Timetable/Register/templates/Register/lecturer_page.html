@@ -5,6 +5,7 @@
 <style>
 body {
   font-family: "Lato", sans-serif;
+    background-color: lightblue;
 }
 
 .sidenav {
@@ -41,48 +42,28 @@ body {
   margin-left: 50px;
 }
 
-.sidenav .logoutbtn {
-  position: absolute;
-  bottom: 50;
-  left: 25px;
-  font-size: 25px;
-  margin-right: 50px;
-}
-
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
-.sidenav .container {
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100vh;
-  display: flex;
-}
-.sidenav .container .btn-holder {
-  justify-content: flex-end;
-  display: flex;
-}
-
-
 </style>
 </head>
 <body>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Announcements</a>
-  <a href="#">Time Table</a>
-  <a href="courses">Courses</a>
-  <a href="./" class="logoutbtn">Log Out</a>
+  <a href="Layout.html">Make announcement</a>
+    <a href="">Announcements</a>
+    <a href ="">Time table</a>
+    <a href ="">Courses</a>
+    <a href ="">Logout</a>
 
 
 </div>
 
-<h2>Welcome student</h2>
+<h2>Welcome lecturer</h2>
 <p>Click on the options provided below</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
 <script>
 function openNav() {

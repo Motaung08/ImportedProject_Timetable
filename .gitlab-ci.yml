@@ -70,8 +70,8 @@ rspec:
     - coverage/
       
       
- # artifacts:
-   # paths:
+  artifacts:
+    paths:
     #- dist/*.whl
    
 pages:
@@ -94,15 +94,3 @@ pages:
 
 
 
-#pages:
-#  stage: deploy
-#  dependencies:
-#    - rspec
-#  script:
- #   - mv coverage/ public/
- # artifacts:
-#    paths:
- #     - public
- #   expire_in: 30 days
-  #only:
- #   - Tshepang

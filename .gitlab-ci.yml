@@ -18,21 +18,21 @@ build:
 test:
   stage: test
   script:
-  - echo "testing"
-  - test -f "build/info.txt"
-  - python manage.py test
-  - coverage run manage.py
-  - coverage report -m
-  - CODECOV_TOKEN="f6d9991c-c08f-4b13-bb6c-4d6214769ac8"
+    - echo "testing"
+    - test -f "build/info.txt"
+    - python manage.py test
+    - coverage run manage.py
+    - coverage report -m
+    - CODECOV_TOKEN="f6d9991c-c08f-4b13-bb6c-4d6214769ac8"
   
   pages:
   script:
-  - pip install sphinx sphinx-rtd-theme
+    - pip install sphinx sphinx-rtd-theme
   artifacts:
     paths:
-    - build/
+        - build/
   only:
-  - sfiso
+    - sfiso
     
 
 #variables:

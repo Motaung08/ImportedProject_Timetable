@@ -8,11 +8,11 @@ build:
     stage: build
     script:
         - echo "Building"
-        -mkdir build
-        -touch build/info.txt
+        - mkdir build
+        - touch build/info.txt
     artifacts:
         paths:
-            -build/
+            - build/
     
 
 variables:
@@ -38,7 +38,7 @@ before_script:
 test:
   stage: test
   script:
-  -echo "testing"
+  - echo "testing"
   - test -f "build/info.txt"
   - python manage.py test
   - coverage run manage.py
@@ -59,7 +59,7 @@ run:
   # run the command here
   artifacts:
     paths:
-        -build/
+        - build/
      
 
 pages:

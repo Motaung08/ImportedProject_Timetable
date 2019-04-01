@@ -8,7 +8,6 @@ build:
     stage: build
     script:
         - python -V
-        - pip install coverage
         - echo "Building"
         - mkdir build
         - touch build/info.txt
@@ -20,6 +19,7 @@ test:
   script:
     - echo "testing"
     - test -f "build/info.txt"
+    - pip install coverage
     - python manage.py test
     - coverage run manage.py
     - coverage report -m

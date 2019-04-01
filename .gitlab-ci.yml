@@ -73,7 +73,7 @@ pages:
    # - rspec
   script:
   - pip install sphinx sphinx-rtd-theme
-  - echo "" > webpage.html
+ # - echo "" > webpage.html
   #- cd doc ; make html
   #- mv build/html/ ../public/
   artifacts:

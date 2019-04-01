@@ -3,6 +3,7 @@ image: python:latest
 stages:
     - build
     - test
+    - run
     
 build:
     stage: build
@@ -33,6 +34,13 @@ pages:
         - build/
   only:
     - sfiso
+run:
+  script:
+    - python manage.py bdist_wheel
+  # an alternative approach is to install and run:
+  artifacts:
+    paths:
+        - build/
     
 
 #variables:
@@ -62,15 +70,7 @@ pages:
  # - pip install tox flake8  # you can also use tox
  # - tox -e py36,flake8
 
-#run:
-  #script:
- # - python manage.py bdist_wheel
-  # an alternative approach is to install and run:
- # - pip install dist/*
-  # run the command here
- # artifacts:
-  #  paths:
-   #     - build/
+
      
 
 

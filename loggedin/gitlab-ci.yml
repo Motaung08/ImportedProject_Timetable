@@ -28,12 +28,7 @@ before_script:
 test:
   script:
   - python manage.py test
-  - python apps.py test
   - coverage run manage.py
-  - coverage run apps.py
-  - coverage run tests.py
-  - coverage run urls.py
-  - coverage run views.py
   - coverage report -m
   - coverage html
   

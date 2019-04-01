@@ -1,8 +1,8 @@
 image: python:latest
 
 stages:
-    -build
-    -test
+    - build
+    - test
     
 build:
     stage: build

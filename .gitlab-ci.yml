@@ -7,7 +7,7 @@ image: python:latest
 # only cache local items.
 
 variables:
-  PIP_CACHE_DIR: "~/Desktop/Gitlab$/.cache/pip"
+ # PIP_CACHE_DIR: "~/Desktop/Gitlab$/.cache/pip"
   
  
 

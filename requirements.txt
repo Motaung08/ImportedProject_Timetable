@@ -1,10 +1,7 @@
-#-e svn+http://myrepo/svn/MyApp#egg=MyApp
-
-#-e git://git.myproject.org/MyProject.git@master#egg=MyProject
-#-e git://git.myproject.org/MyProject.git@v1.0#egg=MyProject
-#-e git://git.myproject.org/MyProject.git@da39a3ee5e6b4b0d3255bfef95601890afd80709#egg=MyProject
-
-package-one==1.9.4
-package-two==3.7.1
-package-three==1.0.1
-...
+dj-database-url==0.5.0
+Django==1.11.14
+django-postgrespool==0.3.1
+gunicorn==19.8.1
+psycopg2-binary==2.7.5
+SQLAlchemy==1.2.10
+whitenoise==3.3.1

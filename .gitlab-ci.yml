@@ -32,7 +32,7 @@ cache:
   paths:
     - .cache/pip
     - venv/
-    - dist/*
+    #- dist/*
 
 before_script:
   - python -V               # Print out python version for debugging
@@ -45,22 +45,22 @@ test:
   script:
  # - pip install -r requirements.txt
   - python manage.py test
-  - pip install tox flake8  # you can also use tox
-  - tox -e py36,flake8
+  #- pip install tox flake8  # you can also use tox
+  #- tox -e py36,flake8
  
 run:
   script:
   - python manage.py bdist_wheel
   - pip install sphinx sphinx-rtd-theme
   # an alternative approach is to install and run:
-  - pip install dist/*
+  #- pip install dist/*
   # run the command here
   # -mv build/../dist/*
 
  
   artifacts:
     paths:
-     - dist/*.whl
+   #  - dist/*.whl
    
 pages:
   script:

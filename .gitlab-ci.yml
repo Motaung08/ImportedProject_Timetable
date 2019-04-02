@@ -45,6 +45,14 @@ unittest-py37:
   #tags:
    # - python27
 
+unittest-py27:
+  stage: test
+  image: python:2.7
+  script:
+    - pip install tox
+    - tox -e py27
+  tags:
+    - python27
 
 
 sphnix:

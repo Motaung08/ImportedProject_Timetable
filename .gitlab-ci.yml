@@ -11,7 +11,9 @@ variables:
  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache"
 
  
-
+stages:
+ - test
+ - run
 # Skip all jobs except the ones that begin and end with 'docs'.
 # Used for commits including ONLY documentation changes.
 # https://docs.gitlab.com/ce/development/writing_documentation.html#testing
@@ -28,49 +30,71 @@ variables:
 # If you want to also cache the installed packages, you have to install
 # them in a virtualenv and cache it as well.
 
+#removed the pip's cache
 
-cache:
-  paths:
-    - .cache/pip
-    - venv/
+#cache:
+ # paths:
+  #  - .cache/pip
+   # - venv/
     #- dist/*
+
 
 before_script:
   - python -V               # Print out python version for debugging
-  - pip install virtualenv
-  - virtualenv venv
-  - source venv/bin/activate
+ # - pip install virtualenv
+  #- virtualenv venv
+  - python -m venv venv
+  - venv/scripts/activate
+  #- source venv/bin/activate
  # - pip install -r requirements.txt
 
-test:
+
+job1:
+  stage: test
   script:
+  - python setup.py test
+  #- pip install tox flake8  # you can also use tox
+  #- tox -e py36,flake8
+
+
+job2:
+  stage: run
+  script:
+  - pip install wheel
+  - python setup.py bdist_wheel
+  artifacts:
+    paths:
+      - dist/*.whl
+      
+###test:
+  ###script:
  # - pip install -r requirements.txt
-  - python manage.py test
+  ###- python manage.py test
   #- pip install tox flake8  # you can also use tox
   #- tox -e py36,flake8
  
-run:
-  script:
-  - python manage.py bdist_wheel
-  - pip install sphinx sphinx-rtd-theme
+###run:
+  ###script:
+  ###- python manage.py bdist_wheel
+  ###- pip install sphinx sphinx-rtd-theme
   # an alternative approach is to install and run:
   #- pip install dist/*
   # run the command here
   # -mv build/../dist/*
 
  
-  artifacts:
-    paths:
+  ###artifacts:
+    ###paths:
    #  - dist/*.whl
    
-pages:
-  script:
-  - pip install sphinx sphinx-rtd-theme
-  - echo "" > webpage.html
+###pages:
+ ### script:
+  ###- pip install sphinx sphinx-rtd-theme
+  ###- echo "" > webpage.html
   #- cd doc ; make html
   #- mv build/html/ ../public/
-  artifacts:
-    paths:
-    - public
-  only:
-  - Tshepang
+  ###artifacts:
+    ###paths:
+    ###- public
+  ###only:
+  ###- Tshepang

@@ -29,21 +29,21 @@ test:
 
 pep8:
   stage: test
-  image: python:2.7
+  image: python:3.7
   script:
     - pip install tox
     - tox -e pep8
-  tags:
-    - python27
+ # tags:
+  #  - python27
 
-unittest-py27:
+unittest-py37:
   stage: test
-  image: python:2.7
+  image: python:3.7
   script:
     - pip install tox
     - tox -e py27
-  tags:
-    - python27
+  #tags:
+   # - python27
 
 unittest-py34:
   stage: test
@@ -51,17 +51,17 @@ unittest-py34:
   script:
     - pip install tox
     - tox -e py34
-  tags:
-    - python34
+#  tags:
+ #   - python34
 
 sphnix:
   stage: test
-  image: python:2.7
+  image: python:3.7
   script:
     - pip install tox
     - tox -e docs
-  tags:
-    - python27
+ # tags:
+  #  - python27
 
 #build:
  # stage: build

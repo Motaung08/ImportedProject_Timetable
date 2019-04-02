@@ -3,9 +3,11 @@
 # https://hub.docker.com/r/library/python/tags/
 image: python:latest
 
+stages:
+    -build
+    -test
 # Change pip's cache directory to be inside the project directory since we can
-# only cache local items.
-
+# only cache local items.    
 variables:
  # PIP_CACHE_DIR: "~/Desktop/Gitlab$/.cache/pip"
   
@@ -17,6 +19,19 @@ variables:
 .except_docs: &except_docs
   except:
   - /(^docs[\/-].*|.*-docs$)/
+  
+  
+ build:
+   stage: build
+     script:
+        - python -V
+        - pip install coverage
+        - echo "Building"
+        - mkdir build
+        - touch build/info.txt
+    artifacts:
+        paths:
+            - build/
   
   # Pip's cache doesn't store the python packages
 # https://pip.pypa.io/en/stable/reference/pip_install/#caching
@@ -39,12 +54,23 @@ before_script:
  # - pip install -r requirements.txt
 
 test:
+ stage: test
   script:
  # - pip install -r requirements.txt
+  - test -f "build/info.txt"
   - python manage.py test
-  
+  - coverage run manage.py
+  - coverage report -m
+  - CODECOV_TOKEN="f6d9991c-c08f-4b13-bb6c-4d6214769ac8"
   #- pip install tox flake8  # you can also use tox
  # - tox -e py36,flake8
+ 
+pages:
+ script:
+  - pip install sphinx sphinx-rtd-theme
+  artifacts:
+    paths:
+    - build/
 
 run:
   script:

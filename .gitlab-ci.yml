@@ -41,18 +41,11 @@ unittest-py37:
   image: python:3.7
   script:
     - pip install tox
-    - tox -e py27
+    - tox -e py37
   #tags:
    # - python27
 
-unittest-py34:
-  stage: test
-  image: python:3.4
-  script:
-    - pip install tox
-    - tox -e py34
-#  tags:
- #   - python34
+
 
 sphnix:
   stage: test

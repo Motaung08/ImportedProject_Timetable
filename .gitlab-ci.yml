@@ -51,8 +51,7 @@ unittest-py27:
   script:
     - pip install tox
     - tox -e py27
-  tags:
-    - python27
+ 
 
 
 sphnix:

@@ -42,10 +42,10 @@ stages:
 before_script:
   - python -V               # Print out python version for debugging
   - pip install virtualenv
-  #- virtualenv venv
-  - python -m venv venv
-  - venv/scripts/activate
-  #- source venv/bin/activate
+  - virtualenv venv
+  #- python -m venv venv
+  #- venv/scripts/activate
+  - source venv/bin/activate
  # - pip install -r requirements.txt
 
 

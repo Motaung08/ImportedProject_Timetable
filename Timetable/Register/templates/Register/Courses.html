@@ -22,7 +22,7 @@ You are registered to do the following modules
 <textarea id = "t" name="n" rows="8" cols="80">
     {%if user%}
         {%for i in user%}
-            <li>{{i.Course_Code}}</li>
+            {{i.Course_Code}}
         {%endfor%}
     {%endif%}
 

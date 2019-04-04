@@ -20,6 +20,6 @@ urlpatterns = [
 
     url(r'^reset-password', views.resetp),
 
-   #url(r'^reset-password/reset', views.resetp)
+    url(r'^announcement', views.announcement)
 ]
 

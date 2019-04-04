@@ -1,0 +1,48 @@
+<h2>Announcements</h2>
+
+<form action="" name="f" id="f" onsubmit="return RegVal()">
+
+    <label for="Subject">Subject:</label>
+    <textarea id = "Subject" name="Subject" rows="0.5" cols="20" >
+    {%if user%}
+        {%for i in user%}
+            {{i.Title}}
+        {%endfor%}
+    {%endif%}
+
+    </textarea>><br>
+
+    <label for="Course Code">Course Code:</label>
+    <textarea id = "Course Code" name="Course Code" rows="0.5" cols="20" >
+            {%if user%}
+                {%for i in user%}
+                     {{i.Course_Code}}
+                {%endfor%}
+            {%endif%}
+    </textarea>><br>
+
+    <label for="Lecturer">Lecturer:</label>
+    <textarea id = "Lecturer" name="Lecturer" rows="0.5" cols="20" >
+            {%if user%}
+                {%for i in user%}
+                     {{i.Lect_No}}
+                {%endfor%}
+            {%endif%}
+    </textarea>><br>
+
+
+
+<p>
+<label for="Content">Content:</label>
+<textarea id = "Content" name="Content"  >
+    {%if user%}
+        {%for i in user%}
+            {{i.Content}}
+        {%endfor%}
+    {%endif%}
+</textarea>
+
+</form>
+
+
+

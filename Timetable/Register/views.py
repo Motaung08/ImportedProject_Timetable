@@ -107,7 +107,7 @@ def courses(request):
 
     user = RegisteredStd.objects.filter(Std_no=1643694)
 
-    print(user.Course_Code)
+    print(user)
     print("below s")
     context = {
         'user': user,
@@ -115,6 +115,23 @@ def courses(request):
     print("inside function")
 
     return render(request, 'Register/Courses.html', context)
+
+def announcement(request):
+    print("inside function")
+    #print(stdnum);
+    s = int(request.POST.get('uname', False))
+    print(s)
+
+    user = Announcements.objects.filter(id=RegisteredStd.objects.filter(Std_no=1643694).count() - 1)
+    #a = Lecturer.objects.filter(Lect_No =user.)
+    print(user)
+    print("below s")
+    context = {
+        'user': user,
+    }
+    print("inside function")
+
+    return render(request, 'Register/Announcement.html', context)
 
 
 def reset(request):

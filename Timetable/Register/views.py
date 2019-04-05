@@ -11,6 +11,18 @@ stdnum = 0;
 
 def login(request):
 
+        context = {
+            'staff': Lecturer.objects.all(),
+            'students': StudentsRegister.objects.all(),
+
+        }
+
+        return render(request, 'Register/Log_in.html', context)
+
+
+
+def dummy(request, STDN):
+
     try:
         kep = request.POST.get('uname', False)
         stdin = int(request.POST.get('uname', False))
@@ -24,8 +36,12 @@ def login(request):
             return render(request, 'Register/Log_in.html')
 
     else:
-        return render(request, 'Register/Loggedin.html')
-        # login(request)
+
+        return render(request, 'Register/Loggedin.html', {'STDN': STDN})
+
+
+    #return render(request, 'Register/dummy.html', {'STDN': STDN})
+
 
 
 
@@ -44,6 +60,8 @@ def loginconfirm(request):
         #login(request)
 
 
+def Make(request):
+    return render(request, 'Register/Make_Announcement.html')
 
 def forgot(request):
 
@@ -82,6 +100,7 @@ def Reg(request):
 
 
 
+
     a = StudentsRegister()
     a.Student_No = int(std)
     a.Name= na
@@ -99,35 +118,69 @@ def Reg(request):
 
     return render(request, 'Register/Log_in.html')
 
-def courses(request):
+
+def MakeAnnouncement(request):
+    print("first print")
+    Subject = request.POST['Title']
+    Course_Code = request.POST['Course Code']
+    Content = request.POST['message']
+
+    print("Aowa")
+
+    a = Announcements()
+    a.Course_Code = Course_Code
+    a.Lect_No = 8765432
+    a.Title = Subject
+    a.Content = Content
+    a.save()
+
+    print("Annnnnnnnnnnnnnnnnnnn")
+    return render(request, 'Register/Make_Announcement.html')
+
+
+def courses(request, STDN):
     print("inside function")
-    #print(stdnum);
-    s = int(request.POST.get('uname', False))
-    print(s)
 
-    user = RegisteredStd.objects.filter(Std_no=1643694)
 
-    print(user)
+    user = RegisteredStd.objects.filter(Std_no=STDN)
+
     print("below s")
     context = {
         'user': user,
+        'STDN': STDN,
     }
     print("inside function")
 
     return render(request, 'Register/Courses.html', context)
 
-def announcement(request):
+def StaffCourses(request, Staff_No):
     print("inside function")
-    #print(stdnum);
-    s = int(request.POST.get('uname', False))
-    print(s)
 
-    user = Announcements.objects.filter(id=RegisteredStd.objects.filter(Std_no=1643694).count() - 1)
-    #a = Lecturer.objects.filter(Lect_No =user.)
-    print(user)
+
+    user = RegisteredStaffs.objects.filter(Staff_no=Staff_No)
+
     print("below s")
     context = {
         'user': user,
+        'STDN': Staff_No,
+    }
+    print("inside function")
+
+    #return HttpResponse("<h1> Hello</h1>")
+    return render(request, 'Register/Courses.html', context)
+
+
+def announcement(request, STDN):
+    print("inside function")
+    # print(stdnum);
+
+    user = Announcements.objects.filter(id=RegisteredStd.objects.filter(Std_no=STDN).count() - 1)
+    # a = Lecturer.objects.filter(Lect_No =user.)
+
+    print("below s")
+    context = {
+        'user': user,
+        'STDN': STDN,
     }
     print("inside function")
 
@@ -140,13 +193,13 @@ def reset(request):
         psw = request.POST['newpsw']
         stdin = int(request.POST.get('uname'))
         email = request.POST.get('emailadd')
-        user= StudentsRegister.objects.get(Student_No=stdin, Email=email)
+        user = StudentsRegister.objects.get(Student_No=stdin, Email=email)
         user.Password = psw
         user.save()
         print("Helllo World")
 
     except StudentsRegister.DoesNotExist:
-        user =None
+        user = None
     if user:
         return render(request, 'Register/congrats.html')
     else:
@@ -155,13 +208,7 @@ def reset(request):
         return render(request, 'Register/congrats.html')
 
 
-    
-
-
 def logged(request):
-
-
-
     return render(request, 'Register/Loggedin.html')
 
 
@@ -183,8 +230,27 @@ def forgotpassword(request):
         from_email = 'tlaphane@gmail.com'
         to_list = ['tlaphane@gmail.com']
 
-        send_mail(subject,message,from_email,to_list,fail_silently=True)
+        send_mail(subject, message, from_email, to_list, fail_silently=True)
         return render(request, 'Register/Log_in.html')
 
+def staff(request,Staff_No):
 
+    try:
+        kep = request.POST.get('uname', False)
+        stdin = int(request.POST.get('uname', False))
+        stdnum = stdin
+        pswin = request.POST.get('psw', False)
+        user = Lecturer.objects.get(Lect_No=stdin, Password=pswin)
+    except StudentsRegister.DoesNotExist:
+        if(kep):
+            return render(request, 'Register/Log_in.html', {'error_message': "Wrong password or Student number", })
+        else:
+            return render(request, 'Register/Log_in.html')
+
+    else:
+
+        return render(request, 'Register/lecturer_page.html', {'STDN': Staff_No})
+
+
+   # return render(request, 'Register/lecturer_page.html')
 

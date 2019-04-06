@@ -42,6 +42,60 @@ body {
   margin-left: 50px;
 }
 
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: ;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 25px;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: none;
+  font-size: 25px;
+  color: #f1f1f1;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  font-size: 25px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 25px;
+  text-align: centre;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  font-size: 25px;
+  color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -53,9 +107,22 @@ body {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">Make announcement</a>
-    <a href="#">Announcements</a>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="myFunction()">Announcements
+        <i class="fa fa-caret-down"></i>
+      </button>
+    <div class="dropdown-content" id="myDropdown">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    </div>
+    </div><br>
+<!--    <a href="#">Announcements</a>-->
     <a href ="#">Time table</a>
     <a href ="courses/">Courses</a>
+
+
+
     <a href ="../">Logout</a>
 
 
@@ -72,6 +139,20 @@ function openNav() {
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
 }
 </script>
 

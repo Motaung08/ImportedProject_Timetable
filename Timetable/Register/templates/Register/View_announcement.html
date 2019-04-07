@@ -1,0 +1,107 @@
+<h1>Announcements</h1>
+<style>
+
+textarea {
+    border-style: dotted;
+    border-width: 3px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: lightblue;
+}
+
+</style>
+<select id="modules" onchange="select();">
+    <option value="All">View all</option>
+    {%if user %}
+        {%for i in user%}
+      <option  value = "{{i.Course_Code}}" >{{i.Course_Code}}</option>
+        {%endfor%}
+    {%endif%}
+</select><br>
+
+<p id="Course_Code"><b></b></p>
+<p id="Lect_No"></p>
+<p id="Title"></p>
+<p id="Content"></p>
+
+<div id = "wrapper">
+
+
+</div>
+
+<!--<script>-->
+
+<!--    var option = document.getElementById('modules').selectedIndex.value;-->
+
+<!--    var announcements = [];-->
+
+<!--            {% for i in announcement %}-->
+<!--                    announcement.push( "{{i.Course_Code}}" );-->
+<!--            {% endfor %}-->
+
+
+
+
+<!--</script>-->
+<script>
+    function select(){
+
+
+    var option = document.getElementById('modules').value;
+
+
+
+    {%if user %}
+        {%for j in user%}
+
+    if(option == "All"){
+
+     var wrapper =  document.getElementById('wrapper');
+     var x = "";
+
+        {% for i in announcement %}
+
+                    x = x + "<textarea>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Content}} \n"+"</textarea>"
+
+        {% endfor %}
+
+        wrapper.innerHTML = x
+    }
+    {%endfor%}
+    {%endif%}
+
+
+
+
+
+
+    {%if user %}
+        {%for j in user%}
+
+    if(option == "{{j.Course_Code}}"){
+
+
+     var wrapper =  document.getElementById('wrapper');
+     var x = "";
+
+        {% for i in announcement %}
+
+                    if("{{j.Course_Code}}"  == "{{i.Course_Code}}"){
+                        x = x + "<textarea>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Content}} \n"+"</textarea>"
+                    }
+
+        {% endfor %}
+
+        wrapper.innerHTML = x
+    }
+    {%endfor%}
+    {%endif%}
+
+    }
+</script>
+<!--{% for i in announcement %}-->
+<!--           <a>{{i.Lect_No}}</a>-->
+<!--{% endfor %}-->
+
+
+

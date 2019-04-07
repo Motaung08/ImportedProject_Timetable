@@ -8,6 +8,41 @@ from .models import StudentsRegister, Login, Lecturer, Courses, Announcements, C
 
 stdnum = 0;
 
+def astaff(request, Staff_No):
+    print("inside function")
+
+
+    user = RegisteredStaffs.objects.filter(Staff_no=Staff_No)
+    announcement = Announcements.objects.filter(Lect_No=Staff_No)
+
+
+    print("below s")
+    context = {
+        'user': user,
+        'STDN': Staff_No,
+        'announcement': announcement,
+    }
+    print("inside function")
+
+    return render(request, 'Register/View_announcement.html', context)
+
+def astudent(request, STDN):
+    print("inside function")
+
+
+    user = RegisteredStd.objects.filter(Std_no=STDN)
+    announcement = Announcements.objects.all()
+
+
+    print("below s")
+    context = {
+        'user': user,
+        'STDN': STDN,
+        'announcement': announcement,
+    }
+    print("inside function")
+
+    return render(request, 'Register/View_announcement.html', context)
 
 def login(request):
 
@@ -241,6 +276,7 @@ def staff(request,Staff_No):
         stdnum = stdin
         pswin = request.POST.get('psw', False)
         user = Lecturer.objects.get(Lect_No=stdin, Password=pswin)
+        user1 = RegisteredStaffs.objects.filter(Staff_no=Staff_No)
     except StudentsRegister.DoesNotExist:
         if(kep):
             return render(request, 'Register/Log_in.html', {'error_message': "Wrong password or Student number", })
@@ -249,7 +285,7 @@ def staff(request,Staff_No):
 
     else:
 
-        return render(request, 'Register/lecturer_page.html', {'STDN': Staff_No})
+        return render(request, 'Register/lecturer_page.html', {'STDN': Staff_No,'staff': user1})
 
 
    # return render(request, 'Register/lecturer_page.html')

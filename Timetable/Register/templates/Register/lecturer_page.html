@@ -107,17 +107,21 @@ body {
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">Make announcement</a>
-    <div class="dropdown">
-      <button class="dropbtn" onclick="myFunction()">Announcements
-        <i class="fa fa-caret-down"></i>
-      </button>
-    <div class="dropdown-content" id="myDropdown">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-    </div>
-    </div><br>
-<!--    <a href="#">Announcements</a>-->
+<!--    <div class="dropdown">-->
+<!--      <button class="dropbtn" onclick="myFunction()">Announcements-->
+<!--        <i class="fa fa-caret-down"></i>-->
+<!--      </button>-->
+<!--    <div class="dropdown-content" id="myDropdown">-->
+<!--    {%if staff %}-->
+<!--        {%for i in staff%}-->
+<!--      <a href="{{i.Course_Code}}" >{{i.Course_Code}}</a>-->
+<!--        {%endfor%}-->
+<!--    {%endif%}-->
+<!--    <a href="#">Link 1</a>-->
+
+<!--    </div>-->
+<!--    </div><br>-->
+    <a href="announcement/">Announcements</a>
     <a href ="#">Time table</a>
     <a href ="courses/">Courses</a>
 

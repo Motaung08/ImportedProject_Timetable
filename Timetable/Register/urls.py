@@ -17,7 +17,7 @@ urlpatterns = [
 
     url(r'^reset-password', views.resetp),
 
-    url(r'^(?P<STDN>[0-9]+)/announcement', views.announcement),
+    url(r'^(?P<STDN>[0-9]+)/announcement', views.astudent),
 
     # url(r'^announcement/made_announcement', views.MakeAnnouncement),
 
@@ -30,6 +30,8 @@ urlpatterns = [
     url(r'^(?P<STDN>[0-9]+)', views.dummy),
 
     url(r'^staff(?P<Staff_No>[0-9]+)/courses', views.StaffCourses),
+    url(r'^staff(?P<Staff_No>[0-9]+)/announcement', views.astaff),
+
 
     url(r'^staff(?P<Staff_No>[0-9]+)', views.staff),
 

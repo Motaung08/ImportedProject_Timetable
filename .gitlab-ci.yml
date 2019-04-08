@@ -1,86 +1,82 @@
-# This file is a template, and might need editing before it works on your project.
-# Official language image. Look for the different tagged releases at:
-# https://hub.docker.com/r/library/python/tags/
 image: python:latest
 
-
-# Change pip's cache directory to be inside the project directory since we can
-# only cache local items.    
-variables:
- # PIP_CACHE_DIR: "~/Desktop/Gitlab$/.cache/pip"
- PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache"
-
- 
 stages:
- - test
- - run
-# Skip all jobs except the ones that begin and end with 'docs'.
-# Used for commits including ONLY documentation changes.
-# https://docs.gitlab.com/ce/development/writing_documentation.html#testing
-.except_docs: &except_docs
-  except:
-  - /(^docs[\/-].*|.*-docs$)/
-  
-  
-
-  
-  # Pip's cache doesn't store the python packages
-# https://pip.pypa.io/en/stable/reference/pip_install/#caching
-#
-# If you want to also cache the installed packages, you have to install
-# them in a virtualenv and cache it as well.
-
-#removed the pip's cache
-
-cache:
-  paths:
-    - .cache/pip
-    - venv/
-    #- dist/*
-
-
-before_script:
-  - python -V               # Print out python version for debugging
-  - pip install virtualenv
-  - virtualenv venv
-  #- python -m venv venv
-  #- venv/scripts/activate
-  - source venv/bin/activate
- # - pip install -r requirements.txt
-
-
-
-      
+    - build
+    - test
+    - run
+    
+build:
+    stage: build
+    script:
+        - python -V
+        - echo "Building"
+        - mkdir build
+        - touch build/info.txt
+    artifacts:
+        paths:
+            - build/
 test:
+  stage: test
   script:
- # - pip install -r requirements.txt
-   - python manage.py test
-  #- pip install tox flake8  # you can also use tox
-  #- tox -e py36,flake8
- 
-run:
-  script:
-   - python manage.py bdist_wheel
-   - pip install sphinx sphinx-rtd-theme
-  # an alternative approach is to install and run:
-  #- pip install dist/*
-  # run the command here
-  # -mv build/../dist/*
+    - echo "testing"
+    - test -f "build/info.txt"
+   # - pip install coverage
+    #- python manage.py test
+    #- coverage run manage.py
+    #- coverage report -m
+    
 
+
+pep8:
+  stage: test
+  image: python:2.7
+  script:
+    - pip install tox
+    - tox -e pep8
+ # tags:
+  #  - python27
+
+unittest-py37:
+  stage: test
+  image: python:3.7
+  script:
+    - pip install tox
+    - tox -e py37
+  #tags:
+   # - python27
+
+unittest-py27:
+  stage: test
+  image: python:2.7
+  script:
+    - pip install tox
+    - tox -e py27
  
-  artifacts:
-    paths:
-   #  - dist/*.whl
-   
+
+
+sphnix:
+  stage: test
+  image: python:3.7
+  script:
+    - pip install tox
+    - tox -e docs
+ # tags:
+  #  - python27
+
+
+  
 pages:
   script:
-   - pip install sphinx sphinx-rtd-theme
-   - echo "" > webpage.html
-  #- cd doc ; make html
-  #- mv build/html/ ../public/
-  
+    - pip install sphinx sphinx-rtd-theme
   artifacts:
     paths:
-    - public
+        - build/
   only:
     - Tshepang
+run:
+  script:
+    - python manage.py bdist_wheel
+  # an alternative approach is to install and run:
+  artifacts:
+    paths:
+        - build/

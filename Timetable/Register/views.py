@@ -13,10 +13,11 @@ def astaff(request, Staff_No):
 
 
     user = RegisteredStaffs.objects.filter(Staff_no=Staff_No)
+    #announcement = Announcements.objects.all()
     announcement = Announcements.objects.filter(Lect_No=Staff_No)
 
 
-    print("below s")
+    print(user)
     context = {
         'user': user,
         'STDN': Staff_No,
@@ -31,7 +32,7 @@ def astudent(request, STDN):
 
 
     user = RegisteredStd.objects.filter(Std_no=STDN)
-    announcement = Announcements.objects.all()
+    announcement = Announcements.objects.all().order_by('-Created')
 
 
     print("below s")
@@ -95,8 +96,17 @@ def loginconfirm(request):
         #login(request)
 
 
-def Make(request):
-    return render(request, 'Register/Make_Announcement.html')
+def make(request,Staff_No):
+    print(Staff_No)
+    user = RegisteredStaffs.objects.filter(Staff_no=Staff_No)
+
+    print(user)
+    context = {
+        'user': user,
+        'STDN': Staff_No,
+
+    }
+    return render(request, 'Register/Make_Announcement.html',context)
 
 def forgot(request):
 
@@ -154,23 +164,32 @@ def Reg(request):
     return render(request, 'Register/Log_in.html')
 
 
-def MakeAnnouncement(request):
-    print("first print")
+def makeAnnouncement(request, Staff_No):
+
     Subject = request.POST['Title']
-    Course_Code = request.POST['Course Code']
+    Course_Code = request.POST.get('Course Code')
+
     Content = request.POST['message']
 
-    print("Aowa")
+
+
+    print(Staff_No)
+
 
     a = Announcements()
-    a.Course_Code = Course_Code
-    a.Lect_No = 8765432
+    q = Courses.objects.get(Course_Code=Course_Code[-8:])
+    a.Course_Code = q
+
+    p = Lecturer.objects.get(Lect_No=Staff_No)
+    a.Lect_No = p
+
     a.Title = Subject
     a.Content = Content
+
     a.save()
 
-    print("Annnnnnnnnnnnnnnnnnnn")
-    return render(request, 'Register/Make_Announcement.html')
+    print("Done")
+    return render(request, 'Register/Announcement.html')
 
 
 def courses(request, STDN):

@@ -40,6 +40,9 @@ class Announcements(models.Model):
     Lect_No = models.ForeignKey(Lecturer, on_delete=models.CASCADE)
     Title = models.CharField(max_length=100)
     Content = models.CharField(max_length=100)
+    Created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
 
     def __str__(self):
         return str(self.Lect_No) + ' - ' + str(self.Course_Code)
@@ -64,7 +67,7 @@ class RegisteredStd(models.Model):
 
 class RegisteredStaffs(models.Model):
     Staff_no = models.IntegerField(max_length=100)
-    Course_Code =models.ForeignKey(Courses, on_delete=models.CASCADE) 
+    Course_Code =models.ForeignKey(Courses, on_delete=models.CASCADE)
 
     def __str__(self):
         return str(self.Staff_no) + ' - ' + str(self.Course_Code)

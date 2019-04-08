@@ -42,7 +42,7 @@ unittest-py37:
   script:
     - pip install tox
     - tox -e py37
-    - https://codecov.io/doc
+   
   #tags:
    # - python27
 

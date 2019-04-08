@@ -35,7 +35,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    },
 }
 #
 # and then adding `--settings app.settings.ci` (or similar) to the test command

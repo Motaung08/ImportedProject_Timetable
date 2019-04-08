@@ -1,5 +1,5 @@
-[![coverage report](https://gitlab.com/dineos-boys/timetable-generator/badges/sfiso/coverage.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/sfiso)
-[![pipeline status](https://gitlab.com/dineos-boys/timetable-generator/badges/sfiso/pipeline.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/sfiso)
+[![coverage report](https://gitlab.com/dineos-boys/timetable-generator/badges/Tshego/coverage.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/Tshego)
+[![pipeline status](https://gitlab.com/dineos-boys/timetable-generator/badges/Tshego/pipeline.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/Tshego)
 The Timetable  generator is meant to generate scheduled timetables for academic courses.
 It is designed help students keep track of when their classes start and which venues are the classes taking place. 
 Lectures also use the Timetable generator to update venues if needed.
@@ -15,4 +15,3 @@ At the moment our web application is able to register and allow a student user t
 
 Python version 2.7
 Project created on Django.
-[![codecov](https://codecov.io/gl/dineos-boys/timetable-generator/branch/sfiso/graph/badge.svg)](https://codecov.io/gl/dineos-boys/timetable-generator)

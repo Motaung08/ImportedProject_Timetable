@@ -24,6 +24,7 @@ test:
     - python manage.py test
     #- coverage run manage.py
     #- coverage report -m
+    - pip install tox flake8  
     
 
 

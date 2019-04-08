@@ -21,7 +21,7 @@ test:
     - echo "testing"
     - test -f "build/info.txt"
    # - pip install coverage
-    #- python manage.py test
+    - python manage.py test
     #- coverage run manage.py
     #- coverage report -m
     
@@ -76,6 +76,7 @@ pages:
 run:
   script:
     - python manage.py bdist_wheel
+    - pip install sphinx sphinx-rtd-theme
   # an alternative approach is to install and run:
   artifacts:
     paths:

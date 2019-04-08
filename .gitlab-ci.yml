@@ -69,11 +69,23 @@ sphnix:
 
   
 pages:
+  stage: deploy
+  script: mv src public
+  artifacts:
+     paths:
+       - public
+  #tags:
+  #  - site-gen
+  #only:
+  #  - Tshepang
+
   script:
     - pip install sphinx sphinx-rtd-theme
   artifacts:
     paths:
         - build/
+  tags:
+    - site-gen
   only:
     - Tshepang
 run:

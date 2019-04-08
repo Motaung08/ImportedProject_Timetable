@@ -15,4 +15,4 @@ At the moment our web application is able to register and allow a student user t
 
 Python version 2.7
 Project created on Django.
-[![codecov](https://codecov.io/gl/dineos-boys/timetable-generator/branch/master/graph/badge.svg)](https://codecov.io/gl/dineos-boys/timetable-generator)
+[![codecov](https://codecov.io/gl/dineos-boys/timetable-generator/branch/sfiso/graph/badge.svg)](https://codecov.io/gl/dineos-boys/timetable-generator)

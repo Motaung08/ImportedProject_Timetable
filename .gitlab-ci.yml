@@ -20,10 +20,10 @@ test:
   script:
     - echo "testing"
     - test -f "build/info.txt"
-   # - pip install coverage
-    #- python manage.py test
-    #- coverage run manage.py
-    #- coverage report -m
+    - pip install coverage
+    - python manage.py test
+    - coverage run manage.py
+    - coverage report -m
     
 
 

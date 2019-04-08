@@ -64,7 +64,7 @@ class RegisteredStd(models.Model):
 
 class RegisteredStaffs(models.Model):
     Staff_no = models.IntegerField(max_length=100)
-    Course_Code =models.ForeignKey(Courses, on_delete=models.CASCADE)
+    Course_Code =models.ForeignKey(Courses, on_delete=models.CASCADE) 
 
     def __str__(self):
         return str(self.Staff_no) + ' - ' + str(self.Course_Code)

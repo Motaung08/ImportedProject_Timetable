@@ -69,7 +69,7 @@ sphnix:
 
   
 pages:
-  stage: deploy
+  stage: build
   script: mv src public
   artifacts:
      paths:

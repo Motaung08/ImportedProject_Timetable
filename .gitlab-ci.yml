@@ -69,11 +69,11 @@ sphnix:
 
   
 pages:
-  stage: run
-  script: mv src public
-  artifacts:
-     paths:
-       - public
+  #stage: run
+  #script: mv src public
+ # artifacts:
+   #  paths:
+   #    - public
   #tags:
   #  - site-gen
   #only:

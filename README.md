@@ -1,5 +1,5 @@
 ![coverage](https://gitlab.com/gitlab-org/gitlab-ce/badges/master/coverage.svg?job=coverage)
-https://example.gitlab.com/<namespace>/<project>/badges/<branch>/coverage.svg?style=flat-square
+
 
 The Timetable  generator is meant to generate scheduled timetables for academic courses.
 It is designed help students keep track of when their classes start and which venues are the classes taking place. 

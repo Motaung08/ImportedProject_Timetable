@@ -1,6 +1,5 @@
-//![coverage](https://gitlab.com/gitlab-org/gitlab-ce/badges/master/coverage.svg?job=coverage)
-[![coverage report](https://gitlab.com/dineos-boys/timetable-generator/badges/master/coverage.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/master)
-[![pipeline status](https://gitlab.com/dineos-boys/timetable-generator/badges/sfiso/pipeline.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/sfiso)
+![coverage](https://gitlab.com/gitlab-org/gitlab-ce/badges/master/coverage.svg?job=coverage)https://example.gitlab.com/dineos-boys/timetable-generator/badges/Tshepang/pipeline.svg
+[![coverage report](https://gitlab.com/dineos-boys/timetable-generator/badges/master/coverage.svg)](https://gitlab.com/dineos/timetable-generators-boy/commits/master)
 ![coverage](https://gitlab.com/gitlab-org/gitlab-ce/badges/Tshepang/coverage.svg?job=coverage)
 
 

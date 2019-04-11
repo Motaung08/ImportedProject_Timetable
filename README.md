@@ -1,5 +1,9 @@
-![coverage](https://gitlab.com/gitlab-org/gitlab-ce/badges/master/coverage.svg?job=coverage)
+//![coverage](https://gitlab.com/gitlab-org/gitlab-ce/badges/master/coverage.svg?job=coverage)
 [![coverage report](https://gitlab.com/dineos-boys/timetable-generator/badges/master/coverage.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/master)
+[![pipeline status](https://gitlab.com/dineos-boys/timetable-generator/badges/sfiso/pipeline.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/sfiso)
+![coverage](https://gitlab.com/gitlab-org/gitlab-ce/badges/Tshepang/coverage.svg?job=coverage)
+
+
 
 The Timetable  generator is meant to generate scheduled timetables for academic courses.
 It is designed help students keep track of when their classes start and which venues are the classes taking place. 

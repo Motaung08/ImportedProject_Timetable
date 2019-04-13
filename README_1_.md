@@ -1,6 +1,5 @@
 [![coverage report](https://gitlab.com/dineos-boys/timetable-generator/badges/sfiso/coverage.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/sfiso)
 [![pipeline status](https://gitlab.com/dineos-boys/timetable-generator/badges/sfiso/pipeline.svg)](https://gitlab.com/dineos-boys/timetable-generator/commits/sfiso)
-![coverage](https://gitlab.com/gitlab-org/gitlab-ce/badges/sfiso/coverage.svg?job=coverage)
 
 
 

@@ -31,6 +31,13 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR,"static"),'Timetable Generator/timetable
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD:Timetable/Timetable/settings.py
+=======
+   # 'Class.apps.ClassConfig',
+   #  'Announcements.apps.AnnouncementsConfig',
+   #  'Courses.apps.CoursesConfig',
+    'Lecturer.apps.LecturerConfig',
+>>>>>>> origin/Tshego:Timetable/Timetable/settings.py
     'Register.apps.RegisterConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -106,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Greenwich'
 
 USE_I18N = True
 

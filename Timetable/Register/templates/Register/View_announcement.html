@@ -144,7 +144,7 @@ textarea {
     margin-left: -75px;
     resize: none;
     width: 400px;
-    height: 100px;
+    height: 200px;
     background-color: #E8E8E8;
   font-family:Lato ;
   font-weight:300 ;
@@ -218,7 +218,7 @@ textarea {
 
         {% for i in announcement %}
 
-                    x = x + "<textarea>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Content}} \n"+"{{i.Created}} \n"+"</textarea>"
+                    x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"</textarea>"
 
         {% endfor %}
 
@@ -244,7 +244,7 @@ textarea {
         {% for i in announcement %}
 
                     if("{{j.Course_Code}}"  == "{{i.Course_Code}}"){
-                        x = x + "<textarea>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Content}} \n"+"</textarea>"
+                        x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"</textarea>"
                     }
 
         {% endfor %}

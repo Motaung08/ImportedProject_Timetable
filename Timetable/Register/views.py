@@ -14,7 +14,8 @@ def astaff(request, Staff_No):
 
     user = RegisteredStaffs.objects.filter(Staff_no=Staff_No)
     #announcement = Announcements.objects.all()
-    announcement = Announcements.objects.filter(Lect_No=Staff_No)
+    #announcement = Announcements.objects.filter(Lect_No=Staff_No)
+    announcement = Announcements.objects.all().order_by('-Created')
 
 
     print(user)

@@ -12,18 +12,7 @@ def index(request):
     #conn = Connection(server, auto_bind=True)
     conn = Connection(server, user="students\\/*student number*/", password="/*password*/", authentication='SIMPLE', auto_bind= True)
 
-    #conn = Connection(server, 'uid=1653526,"ou=students,ou=wits university,dc=ss,dc=wits,dc=ac,dc=za', 'CNSPass1848', auto_bind=True)
-    #conn = Connection(server, 'uid=1653526,cn=users,cn=accounts,dc=ss,dc=wits,dc=ac,dc=za', 'CNSPass1848', auto_bind=True)
-
-    #conn = Connection(server, 'uid=1653526,ou=students,dc=ss,dc=wits,dc=ac,dc=za', 'CNSPass1848', auto_bind=True)
-
-    #conn = Connection(server, 'uid=admin,cn=users,cn=accounts,dc=demo1,dc=freeipa,dc=org', 'Secret123', auto_bind=True)
-
-    #conn = Connection(server, 'uid=1653526,ou=students,ou=wits university,dc=ss,dc=wits,dc=ac,dc=za', 'CNSPass1848', auto_bind=True)
-
-    #conn.search('dc=ss,dc=wits,dc=ac,dc=za', '(objectclass=person)')
-
-    print(conn.search('dc=ss,dc=wits,dc=ac,dc=za','(uid=1653526)', attributes= ALL_ATTRIBUTES))
+    print(conn.search('dc=ss,dc=wits,dc=ac,dc=za','(uid=/*student number*/)', attributes= ALL_ATTRIBUTES))
 
     print(conn.entries)
 

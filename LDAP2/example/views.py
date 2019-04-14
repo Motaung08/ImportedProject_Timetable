@@ -10,7 +10,7 @@ from ldap3 import Server, Connection, ALL, ALL_ATTRIBUTES, NTLM
 def index(request):
     server = Server('ldap://ss.wits.ac.za:389', get_info=ALL)
     #conn = Connection(server, auto_bind=True)
-    conn = Connection(server, user="students\\1653526", password="CNSPass1848", authentication='SIMPLE', auto_bind= True)
+    conn = Connection(server, user="students\\/*student number*/", password="/*password*/", authentication='SIMPLE', auto_bind= True)
 
     #conn = Connection(server, 'uid=1653526,"ou=students,ou=wits university,dc=ss,dc=wits,dc=ac,dc=za', 'CNSPass1848', auto_bind=True)
     #conn = Connection(server, 'uid=1653526,cn=users,cn=accounts,dc=ss,dc=wits,dc=ac,dc=za', 'CNSPass1848', auto_bind=True)

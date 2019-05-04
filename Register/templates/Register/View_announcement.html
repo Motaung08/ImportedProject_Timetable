@@ -1,0 +1,264 @@
+<title>Announcements</title>
+<style>
+
+  @font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(http://themes.googleusercontent.com/static/fonts/lato/v7/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+.primary-heading{
+	font-size: 16x;
+	font-weight: bold;
+	color:#00467f;
+	font-family: Helvetica;
+	margin: 25px 0 0 0;
+}
+
+
+body {
+	background: #448ed3 ;
+	font-family: "Lato" ;
+}
+.wrap {
+	width:250px;
+	height: auto;
+	margin: auto;
+	margin-top: 10%;
+}
+.avatar {
+	width: 100%;
+	margin: auto;
+	width: 65px;
+	border-radius: 100px;
+	height: 65px;
+	background: #448ed3 ;
+	position: relative;
+	bottom: -10px;
+}
+.avatar img {
+	width: 55px;
+	height: 55px;
+	border-radius: 100px;
+	margin: auto;
+	border:3px solid #fff;
+	display: block;
+}
+.wrap input {
+	border: none;
+	background: #fff;
+  font-family:Lato ;
+  font-weight:700 ;
+	display: block;
+	height: 40px;
+	outline: none;
+	width: calc(100% - 24px) ;
+	margin: auto;
+	padding: 6px 12px 6px 12px;
+}
+.bar {
+	width: 100%;
+	height: 1px;
+	background: #fff ;
+}
+.bar i {
+	width: 95%;
+	margin: auto;
+	height: 1px ;
+	display: block;
+	background: #d1d1d1;
+}
+.wrap input[type="text"] {
+	border-radius: 5px 5px 0px 0px ;
+	background: #fff;
+    font-family:Lato ;
+    font-weight:700 ;
+	display: block;
+	height: 40px;
+	outline: none;
+	width: calc(100% - 24px) ;
+	margin: auto;
+	padding: 6px 12px 6px 12px;
+}
+.wrap select {
+	border-radius: 5px 5px 0px 0px ;
+	background: #fff;
+    font-family:Lato ;
+    font-weight:700 ;
+	display: block;
+	height: 40px;
+	outline: none;
+	width: calc(100% - 24px) ;
+	margin: auto;
+	padding: 6px 12px 6px 12px;
+}
+.wrap input[type="password"] {
+	border-radius: 0px 0px 5px 5px ;
+}
+.forgot_link {
+	color: #f44e4e;
+	text-decoration: none;
+	font-size: 11px;
+	position: relative;
+	left: 150px;
+	top: -25px;
+}
+.wrap input[type="button"] {
+	width: 100%;
+	border-radius: 7px;
+	background: #b6ee65;
+	text-decoration: center;
+	border: none;
+	color: #51771a;
+  margin-top:5px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	outline: none;
+	font-size: 13px;
+	border-bottom: 3px solid #307d63;
+	cursor: pointer;
+}
+.wrap button {
+	width: 100%;
+	border-radius: 7px;
+	background: #b6ee65;
+	text-decoration: center;
+	border: none;
+	color: #51771a;
+  margin-top:5px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	outline: none;
+	font-size: 13px;
+	border-bottom: 3px solid #307d63;
+	cursor: pointer;
+}
+textarea {
+    overflow:hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 10px;
+    border:6px solid #556677;
+    color: black;
+    margin-left: -75px;
+    resize: none;
+    width: 400px;
+    height: 200px;
+    background-color: #E8E8E8;
+  font-family:Lato ;
+  font-weight:300 ;
+  padding: 6px 12px 6px 12px;
+}
+
+
+  </style>
+<div class="wrap">
+     <h1 align="center" style="font-size: 32px; font-weight: bold; color:#00467f; font-family: Helvetica ; margin: 25px 0 0 0;">Announcements</h1>
+
+    <div class="avatar">
+      <img src="https://www.jet.org.za/news/wits-logo.png/@@images/52b67716-d10e-4b60-940d-a8c99047a6d0.png">
+    </div>
+    <hr>
+
+<select id="modules" onchange="select();">
+    <option value="All">View all</option>
+    {%if user %}
+        {%for i in user%}
+      <option  value = "{{i.Course_Code}}" >{{i.Course_Code}}</option>
+        {%endfor%}
+    {%endif%}
+</select><br>
+
+<p id="Course_Code"><b></b></p>
+<p id="Lect_No"></p>
+<p id="Title"></p>
+<p id="Content"></p>
+
+<div id = "wrapper">
+
+
+</div>
+
+<form>
+    {% csrf_token %}
+    <input type="button" value="Back to menu" onclick="history.go(-1)">
+
+</form>
+</div>
+<!--<script>-->
+
+<!--    var option = document.getElementById('modules').selectedIndex.value;-->
+
+<!--    var announcements = [];-->
+
+<!--            {% for i in announcement %}-->
+<!--                    announcement.push( "{{i.Course_Code}}" );-->
+<!--            {% endfor %}-->
+
+
+
+
+<!--</script>-->
+<script>
+    function select(){
+
+
+    var option = document.getElementById('modules').value;
+
+
+
+    {%if user %}
+        {%for j in user%}
+
+    if(option == "All"){
+
+     var wrapper =  document.getElementById('wrapper');
+     var x = "";
+
+        {% for i in announcement %}
+
+                    x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"</textarea>"
+
+        {% endfor %}
+
+        wrapper.innerHTML = x
+    }
+    {%endfor%}
+    {%endif%}
+
+
+
+
+
+
+    {%if user %}
+        {%for j in user%}
+
+    if(option == "{{j.Course_Code}}"){
+
+
+     var wrapper =  document.getElementById('wrapper');
+     var x = "";
+
+        {% for i in announcement %}
+
+                    if("{{j.Course_Code}}"  == "{{i.Course_Code}}"){
+                        x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"</textarea>"
+                    }
+
+        {% endfor %}
+
+        wrapper.innerHTML = x
+    }
+    {%endfor%}
+    {%endif%}
+
+    }
+</script>
+<!--{% for i in announcement %}-->
+<!--           <a>{{i.Lect_No}}</a>-->
+<!--{% endfor %}-->
+
+
+

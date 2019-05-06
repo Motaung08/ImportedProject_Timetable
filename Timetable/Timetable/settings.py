@@ -80,14 +80,14 @@ WSGI_APPLICATION = 'Timetable.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'TIMETABLE_GENERATOR',
-        'USER':'root',
-        'PASSWORD':'student',
-        'HOST':'146.141.21.180',
-        'PORT':'3306',
+         'ENGINE': 'django.db.backends.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'NAME': 'TIMETABLE_GENERATOR',
+        # 'USER':'root',
+        # 'PASSWORD':'student',
+        # 'HOST':'146.141.21.180',
+        # 'PORT':'3306',
     }
 }
 

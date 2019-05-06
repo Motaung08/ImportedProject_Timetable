@@ -22,6 +22,7 @@ urlpatterns = [
     # url(r'^announcement/made_announcement', views.MakeAnnouncement),
 
     url(r'^(?P<STDN>[0-9]+)/courses', views.courses),
+    url(r'^(?P<STDN>[0-9]+)/timetable', views.timetable),
 
     # url(r'^reset-password/reset', views.resetp)
 

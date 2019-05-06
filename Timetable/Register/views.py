@@ -208,6 +208,18 @@ def courses(request, STDN):
 
     return render(request, 'Register/Courses.html', context)
 
+def timetable(request, STDN):
+
+    user = RegisteredStd.objects.filter(Std_no=STDN)
+
+    print("below s")
+    context = {
+        'user': user,
+        'STDN': STDN,
+    }
+
+    return render(request, 'Register/Timetable.html', context)
+
 def StaffCourses(request, Staff_No):
     print("inside function")
 

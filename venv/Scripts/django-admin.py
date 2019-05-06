@@ -1,4 +1,4 @@
-#!c:\users\sfisom~1\desktop\dineos~1\venv\scripts\python.exe
+#!C:\Users\sfiso mabz\timetable-generator\venv\Scripts\python.exe
 from django.core import management
 
 if __name__ == "__main__":

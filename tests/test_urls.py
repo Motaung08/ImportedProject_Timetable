@@ -1,5 +1,5 @@
 from django.test import SimpleTestCase ,TestCase
-from django.core.urlresolvers import reverse, resolve
+from django.urls import reverse, resolve
 from Register.views import login,register,courses,forgot,resetp,astudent
 #from Timetable.Register.views import login, register
 

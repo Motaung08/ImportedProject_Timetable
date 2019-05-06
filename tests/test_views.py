@@ -1,7 +1,7 @@
 from django.test import TestCase,Client
-from django.core.urlresolvers import reverse, resolve
+from django.urls import reverse, resolve
 from Register.models import Courses
-import pytest
+
 
 
 class TestViews(TestCase):

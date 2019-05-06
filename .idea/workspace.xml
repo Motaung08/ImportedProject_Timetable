@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ChangeListManager">
     <list default="true" id="dd63b540-1a3b-4b20-a06b-309b6900b65d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Timetable/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/.idea/workspace.xml" afterDir="false" />
@@ -11,6 +12,19 @@
       <change beforePath="$PROJECT_DIR$/Timetable/Timetable/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Timetable/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Timetable/Timetable/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Timetable/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Timetable/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/db.sqlite3" afterDir="false" />
+=======
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="All Places" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1666c4a4-ee6d-4663-a550-f1f4e95f6be6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Timetable/gitlab-runner-congfig.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Timetable/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/.gitlab-ci.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/Register/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/Register/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/views.py" afterDir="false" />
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +32,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -26,6 +41,113 @@
     <option name="y" value="134" />
     <option name="width" value="1388" />
     <option name="height" value="789" />
+=======
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Timetable/Tests/test_models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Timetable/Register/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Timetable/Register/apps.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Timetable/Register/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1005">
+              <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Timetable/Register/tests.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Timetable/loggedin/apps.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Timetable/loggedin/models.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Timetable/loggedin/tests.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Timetable/loggedin/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Timetable/loggedin/views.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Timetable/Register/models.py" />
+        <option value="$PROJECT_DIR$/Timetable/Register/apps.py" />
+        <option value="$PROJECT_DIR$/Timetable/Register/admin.py" />
+        <option value="$PROJECT_DIR$/Timetable/Register/views.py" />
+        <option value="$PROJECT_DIR$/Timetable/Register/urls.py" />
+        <option value="$PROJECT_DIR$/Timetable/Tests/test_models.py" />
+        <option value="$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py" />
+        <option value="$PROJECT_DIR$/Timetable/Tests/test_views.py" />
+        <option value="$PROJECT_DIR$/Timetable/Tests/test_urls.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="115" />
+    <option name="y" value="154" />
+    <option name="width" value="1371" />
+    <option name="height" value="827" />
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -44,12 +166,15 @@
               <item name="timetable-generator" type="462c0819:PsiDirectoryNode" />
               <item name="Timetable" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="timetable-generator" type="b2602c69:ProjectViewProjectNode" />
               <item name="timetable-generator" type="462c0819:PsiDirectoryNode" />
               <item name="Timetable" type="462c0819:PsiDirectoryNode" />
               <item name="Timetable" type="462c0819:PsiDirectoryNode" />
             </path>
+=======
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
           </expand>
           <select />
         </subPane>
@@ -58,8 +183,19 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+=======
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Timetable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Timetable" />
+    </key>
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -73,11 +209,96 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="RunManager" selected="Python tests.Unittests for test_views.TestViews.test_confirm_login">
+    <configuration name="Unittests for test_models.EntryModelTest.test_Courses" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="timetable-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Timetable/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_models.EntryModelTest.test_Courses&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_models.EntryModelTest.test_Lecturer" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="timetable-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Timetable/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_models.EntryModelTest.test_Lecturer&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_models.EntryModelTest.test_login" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="timetable-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Timetable/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_models.EntryModelTest.test_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_views.TestViews.test_confirm_login" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="timetable-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Timetable/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_views.TestViews.test_confirm_login&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_views.TestViews.test_reset" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="timetable-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Timetable/Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_views.TestViews.test_reset&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for test_views.TestViews.test_confirm_login" />
+        <item itemvalue="Python tests.Unittests for test_views.TestViews.test_reset" />
+        <item itemvalue="Python tests.Unittests for test_models.EntryModelTest.test_Courses" />
+        <item itemvalue="Python tests.Unittests for test_models.EntryModelTest.test_Lecturer" />
+        <item itemvalue="Python tests.Unittests for test_models.EntryModelTest.test_login" />
+      </list>
+    </recent_temporary>
+  </component>
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="dd63b540-1a3b-4b20-a06b-309b6900b65d" name="Default Changelist" comment="" />
       <created>1556982722019</created>
       <option name="number" value="Default" />
@@ -108,4 +329,211 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+=======
+      <changelist id="1666c4a4-ee6d-4663-a550-f1f4e95f6be6" name="Default Changelist" comment="" />
+      <created>1556971759322</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556971759322</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_test_urls_TestUrls - 2019.05.04 at 22h 29m 34s.xml">
+      <configuration name="Unittests for test_urls.TestUrls" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_urls_TestUrls - 2019.05.04 at 22h 30m 06s.xml">
+      <configuration name="Unittests for test_urls.TestUrls" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_urls_TestUrls_test_login_url_resolved - 2019.05.04 at 22h 30m 12s.xml">
+      <configuration name="Unittests for test_urls.TestUrls.test_login_url_resolved" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_urls_TestUrls - 2019.05.04 at 22h 32m 09s.xml">
+      <configuration name="Unittests for test_urls.TestUrls" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_models_EntryModelTest_test_Register - 2019.05.04 at 22h 36m 02s.xml">
+      <configuration name="Unittests for test_models.EntryModelTest.test_Register" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_models_EntryModelTest_test_login - 2019.05.04 at 22h 36m 10s.xml">
+      <configuration name="Unittests for test_models.EntryModelTest.test_login" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_models_EntryModelTest_test_Lecturer - 2019.05.04 at 22h 36m 23s.xml">
+      <configuration name="Unittests for test_models.EntryModelTest.test_Lecturer" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_models_EntryModelTest_test_Courses - 2019.05.04 at 22h 36m 28s.xml">
+      <configuration name="Unittests for test_models.EntryModelTest.test_Courses" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_views_TestViews_test_reset - 2019.05.06 at 04h 42m 07s.xml">
+      <configuration name="Unittests for test_views.TestViews.test_reset" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="115" y="154" width="1371" height="827" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29132074" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3297587" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4269341" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297587" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3163539" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.3297587" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" visible="true" weight="0.043018866" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Timetable/Timetable/urls.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Register/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17235">
+          <caret line="1149" column="26" selection-start-line="1149" selection-start-column="26" selection-end-line="1149" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1005">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/django/conf/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Register/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Tests/test_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Tests/test_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-219">
+          <caret column="48" selection-start-column="48" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Tests/test_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Register/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Register/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Register/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/Register/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/loggedin/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/loggedin/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/loggedin/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/loggedin/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Timetable/loggedin/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
 </project>

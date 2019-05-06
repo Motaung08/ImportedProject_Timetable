@@ -57,8 +57,8 @@ body {
 .wrap input {
 	border: none;
 	background: #fff;
-  font-family:Lato ;
-  font-weight:700 ;
+    font-family:Lato ;
+    font-weight:700 ;
 	display: block;
 	height: 40px;
 	outline: none;
@@ -117,7 +117,7 @@ body {
 <body>
 <div class="wrap">
 
-<form name= "myf" id = "myf" action="logged/" method="post" onsubmit="return Logvalid()">
+<form name= "myf" id = "myf" method="post" onsubmit="return go()">
 
   {% csrf_token %}
 
@@ -144,10 +144,8 @@ body {
 
     <button type="submit">Log in</button>
 
-
-
-
 </form>
+
 <form action="" name="f" id="f" onsubmit="return RegVal()">
   <div class="wrap">
 
@@ -182,7 +180,11 @@ body {
          }
          else if(window.location.pathname == "/login/"){
 
-            document.getElementById("myf").action = "logged";
+
+            var x = String(document.getElementById("uname").value)
+
+            document.getElementById("myf").action = x;
+            alert(x);
 
             return true;
          }
@@ -196,8 +198,61 @@ body {
     }
 
 
+    function go(){
+
+            var x = document.getElementById("uname").value
+            var y = document.getElementById("psw").value
+
+            var RegisteredStudents = [];
+            var psw = [];
+
+            var StaffRegistered = [];
+            var Staffpsw = [];
 
 
+            {% for students in students %}
+                    RegisteredStudents.push( "{{students.Student_No}}" );
+                    psw.push( "{{students.Password}}" );
+            {% endfor %}
+
+            {% for staff in staff %}
+                    StaffRegistered.push( "{{staff.Lect_No}}" );
+                    Staffpsw.push( "{{staff.Password}}" );
+            {% endfor %}
+
+
+
+            if(RegisteredStudents.includes(x)){
+                if(psw.includes(y)){
+                    document.getElementById("myf").action = x+"/";
+
+                    return true;
+                 }
+                 else{
+                    alert("Wrong password");
+                    document.getElementById("myf").action = "";
+                    return true
+                }
+            }
+            else if(StaffRegistered.includes(x)){
+                 if(Staffpsw.includes(y)){
+                    document.getElementById("myf").action = "staff" + x + "/";
+
+                    return true;
+                 }
+                 else{
+                    alert("Wrong password");
+                    document.getElementById("myf").action = "";
+                    return true
+                }
+            }
+            else{
+
+                document.getElementById("myf").action = "";
+                alert("Not in database");
+                return true;
+            }
+    }
 
 
 
@@ -221,6 +276,10 @@ body {
                 document.getElementById("f").action = "./register";
                 return true;
             }
+            else if(window.location.pathname == "/login/logged"){
+
+
+            }
             else{
 
 
@@ -230,6 +289,7 @@ body {
 
 
 </script>
+</div>
 </body>
 
 <html>

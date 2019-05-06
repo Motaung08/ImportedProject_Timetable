@@ -71,7 +71,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'dineos_boys.urls'
+ROOT_URLCONF = 'Timetable.urls'
 
 TEMPLATES = [
     {
@@ -90,7 +90,7 @@ TEMPLATES = [
 ]
 
 
-WSGI_APPLICATION = 'dineos_boys.wsgi.application'
+WSGI_APPLICATION = 'Timetable.wsgi.application'
 
 
 # Database

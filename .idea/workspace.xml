@@ -6,18 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1666c4a4-ee6d-4663-a550-f1f4e95f6be6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/timetable-generator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Timetable/Tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Timetable/Tests/test_models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Timetable/Tests/test_urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Timetable/Tests/test_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timetable/Register/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timetable/Register/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Timetable/Register/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Timetable/gitlab-runner-congfig.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Timetable/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Timetable/Register/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Timetable/Register/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/views.py" afterDir="false" />
     </list>
@@ -312,15 +303,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <frame x="115" y="154" width="1371" height="827" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25958306" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29132074" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3297587" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3994638" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4269341" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3297587" />
@@ -332,7 +323,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="3" visible="true" weight="0.038332213" />
+      <window_info anchor="right" id="R Graphics" order="3" visible="true" weight="0.043018866" />
       <window_info anchor="right" id="R Packages" order="4" />
     </layout>
   </component>

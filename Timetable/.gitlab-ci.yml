@@ -87,7 +87,7 @@ pages:
   tags:
     - site-gen
   only:
-    - Tshepang
+    - master
 run:
   script:
     - python manage.py bdist_wheel

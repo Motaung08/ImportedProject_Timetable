@@ -18,6 +18,9 @@ urlpatterns = [
     url(r'^staff(?P<Staff_No>[0-9]+)/make_announcement', views.make),
     url(r'^staff(?P<Staff_No>[0-9]+)/made_announcement', views.makeAnnouncement),
     url(r'^staff(?P<Staff_No>[0-9]+)', views.staff),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3164022b80062732ca7796c1765ed22d27d0f2d6
 ]
 

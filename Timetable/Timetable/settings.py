@@ -25,13 +25,20 @@ SECRET_KEY = '(z%$k@q!l%z_wvm=c@%xv+mukrv+sk_^z4(^&$rmkad*)lf0s7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-
+# STATICFILES_DIRS=[os.path.join(BASE_DIR,"static"),'Timetable Generator/timetable-generator/Timetable/Register/templates/Register/static/css/']
 # Application definition
 
 INSTALLED_APPS = [
-    'Register.apps.RegisterConfig',
+   # 'Class.apps.ClassConfig',
+   #  'Announcements.apps.AnnouncementsConfig',
+   #  'Courses.apps.CoursesConfig',
+    #'Lecturer.apps.LecturerConfig',
+     'Register.apps.RegisterConfig',
+    'Log_In.apps.Log_InConfig',
+    'Courses.apps.CoursesConfig',
+    'Announcements.apps.AnnouncementsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,8 +83,14 @@ WSGI_APPLICATION = 'Timetable.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+         'ENGINE': 'django.db.backends.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'NAME': 'TIMETABLE_GENERATOR',
+        # 'USER':'root',
+        # 'PASSWORD':'student',
+        # 'HOST':'146.141.21.180',
+        # 'PORT':'3306',
     }
 }
 
@@ -106,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Greenwich'
 
 USE_I18N = True
 
@@ -119,3 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

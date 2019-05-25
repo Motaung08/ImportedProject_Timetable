@@ -174,12 +174,39 @@ body {
 
             var path = window.location.pathname;
 
+            var accessed= false
 
-            if((path.match(new RegExp("/", "g")) || []).length == 3){
-                document.getElementById("myf").action = "/login/"+x+"/";
-            }
-            else{
-                 document.getElementById("myf").action = x+"/";
+
+            {% if lecturer %}
+                {%for i in lecturer %}
+                    var f = "{{i.Lect_No}}"
+                    var std=document.getElementById("uname").value;
+                    if(f==std){
+                        var p = "{{i.Password}}"
+                        var pas = document.getElementById("psw").value;
+                        if(p==pas){
+                            if((path.match(new RegExp("/", "g")) || []).length == 3){
+                                document.getElementById("myf").action = "/login/staff"+x+"/";
+                            }
+                            else{
+                                document.getElementById("myf").action = "staff"+x+"/";
+                             }
+                            accessed = true
+                        }
+
+                    }
+                {%endfor%}
+
+            {% endif%}
+
+
+            if(accessed == false){
+                if((path.match(new RegExp("/", "g")) || []).length == 3){
+                    document.getElementById("myf").action = "/login/"+x+"/";
+                }
+                else{
+                     document.getElementById("myf").action = x+"/";
+                }
             }
 
 

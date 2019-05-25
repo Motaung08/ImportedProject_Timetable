@@ -11,8 +11,8 @@ from ldap3 import Server, Connection, ALL, ALL_ATTRIBUTES, NTLM
 
 
 def login(request):
-
-    return render(request, 'Register/Log_in.html')
+    lecturer = Lecturer.objects.all()
+    return render(request, 'Register/Log_in.html',{'lecturer':lecturer})
 
 
 def dummy(request, STDN):
@@ -65,8 +65,10 @@ def dummy(request, STDN):
         return render(request, 'Register/Loggedin.html', {'STDN': STDN})
 
     else:
+
+        lecturer = Lecturer.objects.all()
         print("returned denied")
-        return render(request, 'Register/Log_in.html', {'error_message': "Wrong password or Student number", })
+        return render(request, 'Register/Log_in.html', {'error_message': "Wrong password or Student number", 'lecturer': lecturer })
 
 
 

@@ -7,7 +7,6 @@ class StudentsRegister(models.Model):
     Name = models.CharField(max_length=100)
     Email = models.EmailField(max_length=100)
     Password = models.CharField(max_length=100)
-    CellPhone_No = models.IntegerField()
 
     def __str__(self):
         return str(self.Name) + ' - ' + str(self.Student_No)

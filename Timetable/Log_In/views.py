@@ -48,6 +48,16 @@ def dummy(request, STDN):
             user = once(Std_no=stdin)
             user.save()
 
+            print(conn.entries[0].givenName)
+            print(conn.entries[0].sn)
+            print(conn.entries[0].userPrincipalName)
+
+            fullname = str(conn.entries[0].givenName) + " " + str(conn.entries[0].sn)
+            mail = conn.entries[0].userPrincipalName
+
+            student = StudentsRegister(Student_No= stdin, Name= fullname, Email=mail, Password= pswin)
+            student.save()
+
             arr = conn.entries[0].memberOf
 
             for i in range(0, len(arr)):

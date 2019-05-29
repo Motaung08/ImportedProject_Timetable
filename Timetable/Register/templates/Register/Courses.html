@@ -206,11 +206,7 @@ You are registered to do the following modules
 </label>
 <p>
 <textarea readonly id = "t" name="n">
-    {%if user%}
-        {%for i in user%}
-            {{i.Course_Code}}
-        {%endfor%}
-    {%endif%}
+
 
 </textarea>
         <hr>
@@ -225,5 +221,18 @@ You are registered to do the following modules
 
 
 </body>
+
+<script>
+
+    var j = ""
+    {%if user%}
+        {%for i in user%}
+            j= j + "{{i.Course_Code}}" + "\n"
+        {%endfor%}
+    {%endif%}
+
+    document.getElementById("t").value = j;
+
+</script>
 
 <html>

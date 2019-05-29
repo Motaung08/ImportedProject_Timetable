@@ -59,15 +59,16 @@ def dummy(request, STDN):
             student.save()
 
             arr = conn.entries[0].memberOf
-
+            print(arr)
             for i in range(0, len(arr)):
                 # print(arr[i])
                 x = arr[i].split(',')
                 course = x[0]
+
                 if (len(course) == 11):
                     course_code = course[-8:]
                     print(course_code)
-                    if (course_code[:-4] == "COMS"):
+                    if (course_code[:-4] == "COMS" or course_code[:-4] == "MATH" or course_code[:-4] == "APPM"):
                         print(course_code)
                         u = RegisteredStd(Std_no=stdin, Course_Code=course_code)
                         u.save()

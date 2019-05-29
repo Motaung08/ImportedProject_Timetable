@@ -209,22 +209,30 @@ textarea {
 
 
     {%if user %}
+     var wrapper =  document.getElementById('wrapper');
+     var x = "";
         {%for j in user%}
 
     if(option == "All"){
 
-     var wrapper =  document.getElementById('wrapper');
-     var x = "";
+
+
 
         {% for i in announcement %}
+                    var c = "{{j.Course_Code}}"
+                    var k = "{{i.Course_Code}}"
+                    var kk = k.substr(k.length - 8);
 
-                    x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"</textarea>"
 
+                    if(c==kk){
+                        x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"</textarea>"
+                    }
         {% endfor %}
 
-        wrapper.innerHTML = x
+
     }
     {%endfor%}
+    wrapper.innerHTML = x
     {%endif%}
 
 
@@ -243,7 +251,9 @@ textarea {
 
         {% for i in announcement %}
 
-                    if("{{j.Course_Code}}"  == "{{i.Course_Code}}"){
+                        var k = "{{i.Course_Code}}"
+                        var kk = k.substr(k.length - 8);
+                    if("{{j.Course_Code}}"  == kk){
                         x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"</textarea>"
                     }
 

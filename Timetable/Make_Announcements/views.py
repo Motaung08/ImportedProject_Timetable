@@ -50,7 +50,7 @@ def makeAnnouncement(request, Staff_No):
 
     print(Course_Code)
 
-    send_mail(Subject, Content, 'alechulisani@gmail.com', TO, fail_silently=False)
+    send_mail(Subject, Content, 'timetablegen19@gmail.com', TO, fail_silently=False)
 
     print('email sent')
 

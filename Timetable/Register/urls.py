@@ -18,8 +18,7 @@ urlpatterns = [
 
     url(r'^forgot', views.forgot),
 
-    url(r'^reset-password', views.resetp),
 
-   #url(r'^reset-password/reset', views.resetp)
+
 ]
 

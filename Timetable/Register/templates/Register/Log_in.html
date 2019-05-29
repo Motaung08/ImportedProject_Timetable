@@ -57,8 +57,8 @@ body {
 .wrap input {
 	border: none;
 	background: #fff;
-  font-family:Lato ;
-  font-weight:700 ;
+    font-family:Lato ;
+    font-weight:700 ;
 	display: block;
 	height: 40px;
 	outline: none;
@@ -117,7 +117,7 @@ body {
 <body>
 <div class="wrap">
 
-<form name= "myf" id = "myf" action="logged/" method="post" onsubmit="return Logvalid()">
+<form name= "myf" id = "myf" method="post" onsubmit="return loginValidation()">
 
   {% csrf_token %}
 
@@ -144,10 +144,8 @@ body {
 
     <button type="submit">Log in</button>
 
-
-
-
 </form>
+
 <form action="" name="f" id="f" onsubmit="return RegVal()">
   <div class="wrap">
 
@@ -167,39 +165,55 @@ body {
 
 
 
-    function Logvalid(){
-        if(window.location.pathname == "/login/logged/"){
 
-                document.getElementById("myf").action = "../";
 
-                return true;
-         }
-         else if(window.location.pathname == "/login/reg"){
+    function loginValidation(){
 
-                document.getElementById("myf").action = "./logged";
 
-                return true;
-         }
-         else if(window.location.pathname == "/login/"){
+            var x = document.getElementById("uname").value;
 
-            document.getElementById("myf").action = "logged";
+            var path = window.location.pathname;
 
-            return true;
-         }
-         else{
+            var accessed= false
 
-            document.getElementById("myf").action = "./";
 
-            return true;
+            {% if lecturer %}
+                {%for i in lecturer %}
+                    var f = "{{i.Lect_No}}"
+                    var std=document.getElementById("uname").value;
+                    if(f==std){
+                        var p = "{{i.Password}}"
+                        var pas = document.getElementById("psw").value;
+                        if(p==pas){
+                            if((path.match(new RegExp("/", "g")) || []).length == 3){
+                                document.getElementById("myf").action = "/login/staff"+x+"/";
+                            }
+                            else{
+                                document.getElementById("myf").action = "staff"+x+"/";
+                             }
+                            accessed = true
+                        }
 
-         }
+                    }
+                {%endfor%}
+
+            {% endif%}
+
+
+            if(accessed == false){
+                if((path.match(new RegExp("/", "g")) || []).length == 3){
+                    document.getElementById("myf").action = "/login/"+x+"/";
+                }
+                else{
+                     document.getElementById("myf").action = x+"/";
+                }
+            }
+
+
     }
-
-
-
-
-
-
+        {% if error_message %}
+                alert("Wrong credentials")
+        {% endif%}
 
 
 
@@ -221,6 +235,10 @@ body {
                 document.getElementById("f").action = "./register";
                 return true;
             }
+            else if(window.location.pathname == "/login/logged"){
+
+
+            }
             else{
 
 
@@ -230,6 +248,7 @@ body {
 
 
 </script>
+</div>
 </body>
 
 <html>

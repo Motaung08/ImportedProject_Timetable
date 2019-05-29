@@ -14,7 +14,7 @@
          <tr>
             <td>TIME</td>
             <td>08:00-08:45</td>
-            <td>09:00-09-45</td>
+            <td>09:00-09:45</td>
             <td>10:15-11:00</td>
             <td>11:15-12:00</td>
             <td>12:30-13:15</td>
@@ -38,7 +38,7 @@
 
           <tr>
             <td>TUESDAY</td>
-            <td> math</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -62,14 +62,14 @@
          </tr>
           <tr>
             <td>THURSDAY</td>
-            <td id="THR1"></td>
-            <td id="THR2"></td>
-            <td id="THR3"></td>
-            <td id="THR4"></td>
-            <td id="THR5"></td>
-            <td id="THR6"></td>
-            <td id="THR7"></td>
-            <td id="THR8"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
          </tr>
           <tr>
             <td>FRIDAY</td>
@@ -101,21 +101,426 @@
 						if(day=="THURSDAY"){
 							var Time = "{{j.Course_TimeSlot}}"
 
-							//THR3
-							if(Time.substring(0, 5)=="10:15"){
+                            if(Time =="08:00-08:45"){
 
-								document.getElementById("Table").rows[4].cells[3].innerHTML = "{{j.Course_Name}}"
-								alert(Time)
+								document.getElementById("Table").rows[4].cells[1].innerHTML = "{{j.Course_Name}}"
 							}
 
-							//THR4
-							if(Time.substr(Time.length - 5) == "12:00"){
+							if(Time =="09:00-09:45"){
+
+								document.getElementById("Table").rows[4].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time =="08:00-09:45"){
+
+								document.getElementById("Table").rows[4].cells[1].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[4].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time == "10:15-11:00"){
+
+								document.getElementById("Table").rows[4].cells[3].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="11:15-12:00"){
 
 								document.getElementById("Table").rows[4].cells[4].innerHTML = "{{j.Course_Name}}"
 
 							}
 
+							if(Time=="10:15-12:00"){
 
+								document.getElementById("Table").rows[4].cells[3].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[4].cells[4].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time =="12:30-13:15"){
+
+								document.getElementById("Table").rows[4].cells[5].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="14:15-15:00"){
+
+								document.getElementById("Table").rows[4].cells[6].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-16:00"){
+
+								document.getElementById("Table").rows[4].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[4].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-17:00"){
+
+								document.getElementById("Table").rows[4].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[4].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[4].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-16:00"){
+
+								document.getElementById("Table").rows[4].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-17:00"){
+
+								document.getElementById("Table").rows[4].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[4].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="16:15-17:00"){
+
+								document.getElementById("Table").rows[4].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+						}
+						if(day=="FRIDAY"){
+							var Time = "{{j.Course_TimeSlot}}"
+
+                            if(Time =="08:00-08:45"){
+
+								document.getElementById("Table").rows[5].cells[1].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time =="09:00-09:45"){
+
+								document.getElementById("Table").rows[5].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time =="08:00-09:45"){
+
+								document.getElementById("Table").rows[5].cells[1].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[5].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time == "10:15-11:00"){
+
+								document.getElementById("Table").rows[5].cells[3].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="11:15-12:00"){
+
+								document.getElementById("Table").rows[5].cells[4].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="10:15-12:00"){
+
+								document.getElementById("Table").rows[5].cells[3].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[5].cells[4].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time =="12:30-13:15"){
+
+								document.getElementById("Table").rows[5].cells[5].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="14:15-15:00"){
+
+								document.getElementById("Table").rows[5].cells[6].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-16:00"){
+
+								document.getElementById("Table").rows[5].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[5].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-17:00"){
+
+								document.getElementById("Table").rows[5].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[5].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[5].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-16:00"){
+
+								document.getElementById("Table").rows[5].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-17:00"){
+
+								document.getElementById("Table").rows[5].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[5].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="16:15-17:00"){
+
+								document.getElementById("Table").rows[5].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+						}
+						if(day=="MONDAY"){
+							var Time = "{{j.Course_TimeSlot}}"
+
+                            if(Time =="08:00-08:45"){
+
+								document.getElementById("Table").rows[1].cells[1].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time =="09:00-09:45"){
+
+								document.getElementById("Table").rows[1].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time =="08:00-09:45"){
+
+								document.getElementById("Table").rows[1].cells[1].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[1].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time == "10:15-11:00"){
+
+								document.getElementById("Table").rows[1].cells[3].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="11:15-12:00"){
+
+								document.getElementById("Table").rows[1].cells[4].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="10:15-12:00"){
+
+								document.getElementById("Table").rows[1].cells[3].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[1].cells[4].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time =="12:30-13:15"){
+
+								document.getElementById("Table").rows[1].cells[5].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="14:15-15:00"){
+
+								document.getElementById("Table").rows[1].cells[6].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-16:00"){
+
+								document.getElementById("Table").rows[1].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[1].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-17:00"){
+
+								document.getElementById("Table").rows[1].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[1].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[1].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-16:00"){
+
+								document.getElementById("Table").rows[1].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-17:00"){
+
+								document.getElementById("Table").rows[1].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[1].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="16:15-17:00"){
+
+								document.getElementById("Table").rows[1].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+						}
+						if(day=="TUESDAY"){
+							var Time = "{{j.Course_TimeSlot}}"
+
+                            if(Time =="08:00-08:45"){
+
+								document.getElementById("Table").rows[2].cells[1].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time =="09:00-09:45"){
+
+								document.getElementById("Table").rows[2].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time =="08:00-09:45"){
+
+								document.getElementById("Table").rows[2].cells[1].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[2].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time == "10:15-11:00"){
+
+								document.getElementById("Table").rows[2].cells[3].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="11:15-12:00"){
+
+								document.getElementById("Table").rows[2].cells[4].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="10:15-12:00"){
+
+								document.getElementById("Table").rows[2].cells[3].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[2].cells[4].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time =="12:30-13:15"){
+
+								document.getElementById("Table").rows[2].cells[5].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="14:15-15:00"){
+
+								document.getElementById("Table").rows[2].cells[6].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-16:00"){
+
+								document.getElementById("Table").rows[2].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[2].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-17:00"){
+
+								document.getElementById("Table").rows[2].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[2].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[2].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-16:00"){
+
+								document.getElementById("Table").rows[2].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-17:00"){
+
+								document.getElementById("Table").rows[2].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[2].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="16:15-17:00"){
+
+								document.getElementById("Table").rows[2].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+						}
+						if(day=="WEDNESDAY"){
+							var Time = "{{j.Course_TimeSlot}}"
+
+                            if(Time =="08:00-08:45"){
+
+								document.getElementById("Table").rows[3].cells[1].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time =="09:00-09:45"){
+
+								document.getElementById("Table").rows[3].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time =="08:00-09:45"){
+
+								document.getElementById("Table").rows[3].cells[1].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[3].cells[2].innerHTML = "{{j.Course_Name}}"
+							}
+
+							if(Time == "10:15-11:00"){
+
+								document.getElementById("Table").rows[3].cells[3].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="11:15-12:00"){
+
+								document.getElementById("Table").rows[3].cells[4].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="10:15-12:00"){
+
+								document.getElementById("Table").rows[3].cells[3].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[3].cells[4].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time =="12:30-13:15"){
+
+								document.getElementById("Table").rows[3].cells[5].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="14:15-15:00"){
+
+								document.getElementById("Table").rows[3].cells[6].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-16:00"){
+
+								document.getElementById("Table").rows[3].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[3].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time == "14:15-17:00"){
+
+								document.getElementById("Table").rows[3].cells[6].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[3].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[3].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-16:00"){
+
+								document.getElementById("Table").rows[3].cells[7].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="15:15-17:00"){
+
+								document.getElementById("Table").rows[3].cells[7].innerHTML = "{{j.Course_Name}}"
+								document.getElementById("Table").rows[3].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
+
+							if(Time=="16:15-17:00"){
+
+								document.getElementById("Table").rows[3].cells[8].innerHTML = "{{j.Course_Name}}"
+
+							}
 
 						}
 					}

@@ -27,15 +27,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-STATICFILES_DIRS=[os.path.join(BASE_DIR,"static"),'Timetable Generator/timetable-generator/Timetable/Register/templates/Register/static/css/']
+# STATICFILES_DIRS=[os.path.join(BASE_DIR,"static"),'Timetable Generator/timetable-generator/Timetable/Register/templates/Register/static/css/']
 # Application definition
 
 INSTALLED_APPS = [
    # 'Class.apps.ClassConfig',
    #  'Announcements.apps.AnnouncementsConfig',
    #  'Courses.apps.CoursesConfig',
-    'Lecturer.apps.LecturerConfig',
-    'Register.apps.RegisterConfig',
+    #'Lecturer.apps.LecturerConfig',
+     'Register.apps.RegisterConfig',
+    'Log_In.apps.Log_InConfig',
+    'Courses.apps.CoursesConfig',
+    'Announcements.apps.AnnouncementsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,9 +83,9 @@ WSGI_APPLICATION = 'Timetable.wsgi.application'
 
 DATABASES = {
     'default': {
-         'ENGINE': 'django.db.backends.sqlite3',
+          'ENGINE': 'django.db.backends.sqlite3',
         # 'ENGINE': 'django.db.backends.mysql',
-         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         # 'NAME': 'TIMETABLE_GENERATOR',
         # 'USER':'root',
         # 'PASSWORD':'student',
@@ -132,4 +135,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

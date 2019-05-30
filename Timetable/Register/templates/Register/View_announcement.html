@@ -243,8 +243,10 @@ textarea {
 
         {% for i in announcement %}
 
-                    if("{{j.Course_Code}}"  == "{{i.Course_Code}}"){
-                        x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"</textarea>"
+                    if("{{j.Course_Code}}"  == "{{i.Course_Code}}" && "{{i.pdf}}"==""){
+                        x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"{{i.pdf}}"+"</textarea>"
+                    }else{
+                        x = x + "<textarea readonly>"+"{{i.Course_Code}}" + "\n" +"{{i.Lect_No}} \n"+"{{i.Title}} \n" +"{{i.Created}} \n"+ "{{i.Content}} \n"+"</textarea>"+"<a href='/media/"+"{{i.pdf}}'" +"class="+"btn btn-primary btn-sm" +"target="+"_blank"+">"+"Download"+"</a> \n"+"<br>"
                     }
 
         {% endfor %}
@@ -261,4 +263,5 @@ textarea {
 <!--{% endfor %}-->
 
 
-
+<!--"<a href="{{i.pdf.url}}" class="btn btn-primary btn-sm" target="_blank">Download</a> \n"-->
+<!--"<a href="+"{{i.pdf}}" +"class="+"btn btn-primary btn-sm" +"target="+"_blank"+">"+"Download"+"</a> \n"-->

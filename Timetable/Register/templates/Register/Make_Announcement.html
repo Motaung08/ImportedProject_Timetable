@@ -155,9 +155,29 @@ textarea {
 
 
   </style>
+
+{% load static %}
+<!--<div class="wrap">-->
+<!--{% block content %}-->
+<!--  <form method="post" enctype="multipart/form-data">-->
+<!--    {% csrf_token %}-->
+<!--    {{form.as_p}}-->
+<!--    <input type="file" name="myfile">-->
+<!--    <button type="submit" class="btn btn-primary">Upload</button>-->
+<!--  </form>-->
+<!--  </div>-->
+
+<!--  {% if uploaded_file_url %}-->
+<!--    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>-->
+<!--  {% endif %}-->
+
+
+{% endblock %}
+
+
 <div class="wrap">
 
-<form method="post" action="made_announcement" >
+<form method="post" action="made_announcement" enctype="multipart/form-data" >
   {% csrf_token %}
   <h1 align="center" style="font-size: 32px; font-weight: bold; color:#00467f; font-family: Helvetica ; margin: 25px 0 0 0;">Make an announcement</h1>
 
@@ -179,7 +199,34 @@ textarea {
 <!--    <input type="text" id="Course Code" name="Course Code" title="Course Code" />-->
   <br>
 
-  <input type="text" placeholder="Please enter your announcement" name="message" rows="80" cols="80" required/><br>
+  <input type="text" placeholder="Please enter your announcement" name="message" rows="80" cols="80" required/>
+
+  {% load static %}
+
+
+<!--  <form method="post" enctype="multipart/form-data">-->
+    {% csrf_token %}
+    <input type="file" title="myfile" id="myfile" name="myfile">
+<!--    <button type="submit" class="btn btn-primary">Upload</button>-->
+<!--  </form>-->
+<!--{% load static %}-->
+
+
+<!--  <form method="post" enctype="multipart/form-data">-->
+<!--    {% csrf_token %}-->
+<!--    <input type="file" name="myfile">-->
+<!--    <button type="submit" class="btn btn-primary">Upload</button>-->
+<!--  </form>-->
+
+<!--  {% if uploaded_file_url %}-->
+<!--    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>-->
+<!--  {% endif %}-->
+  {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+
+
+  <br>
 <hr>
   <p class="form-actions">
     <button type="submit" value="submit" title="submit">Make announcement</button>
@@ -194,5 +241,4 @@ textarea {
 
 </div>
 </html>
-
 

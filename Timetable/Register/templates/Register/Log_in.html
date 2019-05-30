@@ -57,13 +57,8 @@ body {
 .wrap input {
 	border: none;
 	background: #fff;
-<<<<<<< HEAD
-  font-family:Lato ;
-  font-weight:700 ;
-=======
     font-family:Lato ;
     font-weight:700 ;
->>>>>>> origin/Tshego
 	display: block;
 	height: 40px;
 	outline: none;
@@ -122,11 +117,7 @@ body {
 <body>
 <div class="wrap">
 
-<<<<<<< HEAD
-<form name= "myf" id = "myf" action="logged/" method="post" onsubmit="return Logvalid()">
-=======
 <form name= "myf" id = "myf" method="post" onsubmit="return go()">
->>>>>>> origin/Tshego
 
   {% csrf_token %}
 
@@ -153,15 +144,8 @@ body {
 
     <button type="submit">Log in</button>
 
-<<<<<<< HEAD
-
-
-
-</form>
-=======
 </form>
 
->>>>>>> origin/Tshego
 <form action="" name="f" id="f" onsubmit="return RegVal()">
   <div class="wrap">
 
@@ -196,15 +180,11 @@ body {
          }
          else if(window.location.pathname == "/login/"){
 
-<<<<<<< HEAD
-            document.getElementById("myf").action = "logged";
-=======
 
             var x = String(document.getElementById("uname").value)
 
             document.getElementById("myf").action = x;
             alert(x);
->>>>>>> origin/Tshego
 
             return true;
          }
@@ -218,10 +198,6 @@ body {
     }
 
 
-<<<<<<< HEAD
-
-
-=======
     function go(){
 
             var x = document.getElementById("uname").value
@@ -277,7 +253,6 @@ body {
                 return true;
             }
     }
->>>>>>> origin/Tshego
 
 
 
@@ -301,13 +276,10 @@ body {
                 document.getElementById("f").action = "./register";
                 return true;
             }
-<<<<<<< HEAD
-=======
             else if(window.location.pathname == "/login/logged"){
 
 
             }
->>>>>>> origin/Tshego
             else{
 
 
@@ -317,10 +289,7 @@ body {
 
 
 </script>
-<<<<<<< HEAD
-=======
 </div>
->>>>>>> origin/Tshego
 </body>
 
 <html>

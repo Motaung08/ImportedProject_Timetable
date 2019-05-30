@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+  <component name="ChangeListManager">
+    <list default="true" id="dd63b540-1a3b-4b20-a06b-309b6900b65d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Timetable/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/Register/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/Register/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/Register/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/Register/templates/Register/GraphColoring.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/templates/Register/GraphColoring.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/Register/templates/Register/Loggedin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/templates/Register/Loggedin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/Timetable/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Timetable/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/Timetable/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Timetable/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timetable/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/db.sqlite3" afterDir="false" />
+=======
   <component name="AnalysisUIOptions">
     <option name="SCOPE_TYPE" value="8" />
     <option name="CUSTOM_SCOPE_NAME" value="All Places" />
@@ -11,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/Timetable/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Timetable/Register/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Timetable/Register/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Timetable/Register/views.py" afterDir="false" />
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +32,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="472" />
+    <option name="y" value="134" />
+    <option name="width" value="1388" />
+    <option name="height" value="789" />
+=======
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -123,6 +147,7 @@
     <option name="y" value="154" />
     <option name="width" value="1371" />
     <option name="height" value="827" />
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -141,6 +166,15 @@
               <item name="timetable-generator" type="462c0819:PsiDirectoryNode" />
               <item name="Timetable" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+            <path>
+              <item name="timetable-generator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="timetable-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="Timetable" type="462c0819:PsiDirectoryNode" />
+              <item name="Timetable" type="462c0819:PsiDirectoryNode" />
+            </path>
+=======
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
           </expand>
           <select />
         </subPane>
@@ -149,6 +183,10 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalResources" />
+=======
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Timetable" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -157,6 +195,7 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Timetable" />
     </key>
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -170,6 +209,8 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+=======
   <component name="RunManager" selected="Python tests.Unittests for test_views.TestViews.test_confirm_login">
     <configuration name="Unittests for test_models.EntryModelTest.test_Courses" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="timetable-generator" />
@@ -251,11 +292,44 @@
       </list>
     </recent_temporary>
   </component>
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="dd63b540-1a3b-4b20-a06b-309b6900b65d" name="Default Changelist" comment="" />
+      <created>1556982722019</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556982722019</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="472" y="134" width="1388" height="789" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24981685" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+=======
       <changelist id="1666c4a4-ee6d-4663-a550-f1f4e95f6be6" name="Default Changelist" comment="" />
       <created>1556971759322</created>
       <option name="number" value="Default" />
@@ -461,4 +535,5 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
+>>>>>>> 011236475a7e13e513eb76573785895d82b14096
 </project>

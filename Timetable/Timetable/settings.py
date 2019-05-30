@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(z%$k@q!l%z_wvm=c@%xv+mukrv+sk_^z4(^&$rmkad*)lf0s7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -31,13 +31,10 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR,"static"),'Timetable Generator/timetable
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD:Timetable/Timetable/settings.py
-=======
    # 'Class.apps.ClassConfig',
    #  'Announcements.apps.AnnouncementsConfig',
    #  'Courses.apps.CoursesConfig',
     'Lecturer.apps.LecturerConfig',
->>>>>>> origin/Tshego:Timetable/Timetable/settings.py
     'Register.apps.RegisterConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -83,8 +80,14 @@ WSGI_APPLICATION = 'Timetable.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+         'ENGINE': 'django.db.backends.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'NAME': 'TIMETABLE_GENERATOR',
+        # 'USER':'root',
+        # 'PASSWORD':'student',
+        # 'HOST':'146.141.21.180',
+        # 'PORT':'3306',
     }
 }
 

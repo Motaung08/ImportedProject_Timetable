@@ -5,6 +5,9 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django.shortcuts import HttpResponse,render, redirect
 from .models import StudentsRegister, Login, Lecturer, Courses, Announcements, Class, RegisteredStd, RegisteredStaffs
+from django.conf import settings
+from .forms import CoursesForm
+from django.core.files.storage import FileSystemStorage
 
 stdnum = 0;
 
@@ -194,6 +197,7 @@ def makeAnnouncement(request, Staff_No):
 
 
 def courses(request, STDN):
+
     print("inside function")
 
 
@@ -205,6 +209,7 @@ def courses(request, STDN):
         'STDN': STDN,
     }
     print("inside function")
+    simple_upload(request)
 
     return render(request, 'Register/Courses.html', context)
 
@@ -223,13 +228,21 @@ def timetable(request, STDN):
 def StaffCourses(request, Staff_No):
     print("inside function")
 
+    if request.method == 'POST':
+        form = CoursesForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+    else:
+        form = CoursesForm()
 
     user = RegisteredStaffs.objects.filter(Staff_no=Staff_No)
 
     print("below s")
     context = {
+        'form': form,
         'user': user,
         'STDN': Staff_No,
+
     }
     print("inside function")
 
@@ -322,3 +335,10 @@ def staff(request,Staff_No):
 
    # return render(request, 'Register/lecturer_page.html')
 
+def simple_upload(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        return render(request, 'Register/congrats.html', {  'uploaded_file_url': uploaded_file_url})

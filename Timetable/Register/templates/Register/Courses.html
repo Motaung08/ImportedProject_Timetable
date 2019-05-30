@@ -165,6 +165,31 @@ textarea {
 
 
 <body>
+{% load static %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>
+
+  {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+
+
+{% endblock %}
+
+{% block upload %}
+  <h2>Upload PDF</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+{% endblock %}
+
 
 <form action="" name="f" id="f" onsubmit="return RegVal()">
     <div class="wrap">
@@ -180,14 +205,15 @@ textarea {
 You are registered to do the following modules
 </label>
 <p>
-<textarea readonly id = "t" name="n">
-    {%if user%}
-        {%for i in user%}
-            {{i.Course_Code}}
-        {%endfor%}
-    {%endif%}
+<!--<textarea readonly id = "t" name="n">-->
+<!--    {%if user%}-->
+<!--        {%for i in user%}-->
+<!--&lt;!&ndash;            {{i.Course_Code}}&ndash;&gt;-->
+<!--        {%endfor%}-->
+<!--    {%endif%}-->
 
-</textarea><hr>
+<!--</textarea>-->
+        <hr>
         <form>
     {% csrf_token %}
     <input type="button" value="Back to menu" onclick="history.go(-1)">
